@@ -1,0 +1,51 @@
+header {
+  height: 100vh;
+  background-image: url("../../image//Cover.png");
+  background-color: #191919;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.main-title {
+  color: #e61277;
+  font-family: "Baloo 2", cursive;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.main-title-1 {
+  font-size: 38px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.main-description {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+  width: 36%;
+}
+.main {
+  margin-top: 10%;
+}
+.header-bottom {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.header-bottom-width {
+  width: 45rem;
+  padding: 20px 15px;
+  border-radius: 9px 0px 0px 9px;
+  background-color: tomato;
+  margin-bottom: 10px;
+  margin-left: 2%;
+}
+
+.header-bottom-text {
+  color: white;
+  text-transform: capitalize;
+  font-size: 18px;
+}

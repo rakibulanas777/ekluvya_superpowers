@@ -1,0 +1,13 @@
+nav {
+  background-color: #3b3b3b62;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-navbar {
+  display: flex;
+
+  align-items: center;
+}
