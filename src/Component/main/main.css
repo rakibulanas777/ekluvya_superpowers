@@ -1,0 +1,10 @@
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-text {
+  color: white;
+  font-size: 18px;
+  width: 30%;
+}

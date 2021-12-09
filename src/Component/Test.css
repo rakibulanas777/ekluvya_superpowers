@@ -1,0 +1,9 @@
+.carrsoul-img {
+  position: relative;
+}
+.title-caro {
+  position: absolute;
+  top: 90%;
+  color: red;
+  z-index: 1;
+}

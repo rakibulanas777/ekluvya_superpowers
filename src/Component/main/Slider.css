@@ -1,0 +1,26 @@
+.carsol-img {
+  position: relative;
+}
+.carsol-img:hover {
+  cursor: pointer;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  letter-spacing: 0.88px;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link:hover {
+  color: white;
+}
+.carusoal {
+  margin-top: 10rem;
+}

@@ -29,8 +29,6 @@ header {
   margin-top: 10%;
 }
 .header-bottom {
-  position: absolute;
-  right: 0;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -39,7 +37,8 @@ header {
   width: 45rem;
   padding: 20px 15px;
   border-radius: 9px 0px 0px 9px;
-  background-color: tomato;
+  background: transparent linear-gradient(278deg, #ff7000 0%, #ec1377 100%) 0%
+    0%;
   margin-bottom: 10px;
   margin-left: 2%;
 }
