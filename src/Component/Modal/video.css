@@ -1,0 +1,12 @@
+.video {
+  position: relative;
+}
+.cross-icon {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  cursor: pointer;
+}
+.fa-times {
+  color: white;
+}

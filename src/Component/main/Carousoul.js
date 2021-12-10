@@ -73,7 +73,7 @@ const Carousoul = () => {
     <div className="container carusoal">
       <Slider {...settings}>
         {value.map((sliders) => (
-          <Sliders Slidercard={sliders} key={sliders.id}></Sliders>
+          <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
         ))}
       </Slider>
     </div>

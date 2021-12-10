@@ -1,9 +1,30 @@
-import React from "react";
+import React, { Component, useEffect, useState } from "react";
 import profile from "../../image/dynamic.png";
 import "./Page.css";
 import play from "../../image/playback.svg";
 import gift from "../../image/vector.svg";
-const Page = () => {
+import LoginModal from "../Modal/LoginModal";
+import VideoModal from "../Modal/VideoModal";
+import { useParams } from "react-router";
+const Page = ({ match }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
+
+  const { id } = useParams();
+  console.log(id);
+
+  const [value, getValue] = useState([]);
+  useEffect(() => {
+    fetch("../../../img.json")
+      .then((res) => res.json())
+      .then((data) => getValue(data[id - 1]));
+  }, []);
+
   return (
     <div className="container">
       <div className="row g-4">
@@ -29,7 +50,14 @@ const Page = () => {
             <div className="page-title d-flex mb-3 align-items-center">
               <div className="page-title-text me-5">Mega Memory</div>
               <div className="page-title-img">
-                <img src={play} height="45px" width="45px" alt="" srcset="" />
+                <img
+                  src={play}
+                  onClick={handleOpen2}
+                  height="45px"
+                  width="45px"
+                  alt=""
+                  srcset=""
+                />
               </div>
             </div>
             <div className="page-text-description mb-4">
@@ -54,7 +82,9 @@ const Page = () => {
           </div>
           <div className="discount-gift-section d-flex align-items-start mt-2">
             <div className="discount-gift-box d-flex me-4 align-items-center justify-content-center ">
-              <span className="text">Gift now</span>
+              <button className="text" onClick={handleOpen}>
+                Gift now
+              </button>
               <div className="img">
                 <img src={gift} width="100px" className="gift-box-img" alt="" />
               </div>
@@ -81,6 +111,12 @@ const Page = () => {
           Sahasra + 2758 <br /> kids have joined
         </div>
       </div>
+      <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />
+      <VideoModal
+        openbtn2={handleOpen2}
+        closebtn2={handleClose2}
+        open2={open2}
+      />
     </div>
   );
 };

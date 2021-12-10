@@ -17,7 +17,7 @@ function App() {
             <Main />
             <Carousoul />
           </Route>
-          <Route exact path="/next">
+          <Route exact path="/page/:id">
             <Navbar />
             <Page />
           </Route>
