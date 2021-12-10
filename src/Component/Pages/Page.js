@@ -6,6 +6,7 @@ import gift from "../../image/vector.svg";
 import LoginModal from "../Modal/LoginModal";
 import VideoModal from "../Modal/VideoModal";
 import { useParams } from "react-router";
+import EventTimer from "./EventTimer";
 const Page = ({ match }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -20,7 +21,7 @@ const Page = ({ match }) => {
 
   const [value, getValue] = useState([]);
   useEffect(() => {
-    fetch("../../../img.json")
+    fetch("../../../data.json")
       .then((res) => res.json())
       .then((data) => getValue(data[id - 1]));
   }, []);
@@ -96,8 +97,9 @@ const Page = ({ match }) => {
               <div className="discount">
                 ₹<span className="discount-number-box"> 1499</span>
               </div>
-              <div className="offer">offer expires in</div>
-              <div className="expire-offer">17 : 10 : 40</div>
+              <div className="offer">
+                offer expires in <EventTimer />
+              </div>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import Main from "./Component/main/Main";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Page from "./Component/Pages/Page";
 import Test from "./Component/Test";
+import EventTimer from "./Component/Pages/EventTimer";
 
 function App() {
   return (

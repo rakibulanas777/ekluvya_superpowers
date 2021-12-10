@@ -28,7 +28,7 @@ function SamplePrevArrow(props) {
 const Carousoul = () => {
   const [value, getValue] = useState([]);
   useEffect(() => {
-    fetch("../../../img.json")
+    fetch("../../../data.json")
       .then((res) => res.json())
       .then((data) => getValue(data));
   }, []);
