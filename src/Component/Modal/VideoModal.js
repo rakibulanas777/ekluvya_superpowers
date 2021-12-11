@@ -4,14 +4,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./video.css";
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "60%",
-  p: 4,
-};
+
 const VideoModal = ({ openbtn2, closebtn2, open2 }) => {
   return (
     <div>
@@ -21,7 +14,7 @@ const VideoModal = ({ openbtn2, closebtn2, open2 }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className="video-box">
           <video width="100%" className="video" height="auto" controls>
             <source
               src="https://www.w3schools.com/html/mov_bbb.mp4"

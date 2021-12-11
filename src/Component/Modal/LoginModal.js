@@ -34,13 +34,13 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="mb-5">
-          <div className="btn-modal d-flex align-items-start justify-content-center">
+          <div className="btn-modal d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center">
             <div className="guest-btn-modal">
-              <button className="openPayment me-5" onClick={handleOpen}>
+              <button className="openPayment lg-me-5 me-0" onClick={handleOpen}>
                 Continue as Guest
               </button>
             </div>
-            <div className="login-btn-modal ms-5">
+            <div className="login-btn-modal ms-0 mt-5 lg-mt-0 lg-ms-5">
               <button className="openPayment" onClick={() => showValue(!value)}>
                 Log in to Gift
               </button>

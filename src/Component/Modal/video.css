@@ -1,6 +1,13 @@
 .video {
   position: relative;
 }
+.video-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
 .cross-icon {
   position: absolute;
   top: 10%;
@@ -9,4 +16,9 @@
 }
 .fa-times {
   color: white;
+}
+@media (max-width: 560px) {
+  .video-box {
+    width: 95%;
+  }
 }

@@ -14,6 +14,8 @@
 }
 .card {
   background-color: #242424;
+  width: 345px;
+  height: 583px;
 }
 .card-body {
   position: relative;
@@ -38,7 +40,7 @@
   font-size: 500;
 }
 .input {
-  width: 20%;
+  width: 9rem;
   padding: 6px 18px;
   outline: none;
   border-radius: 20px;
@@ -109,4 +111,37 @@
   font-weight: 600;
   position: relative;
   left: 15%;
+}
+@media (max-width: 520px) {
+  .discount-gift-box {
+    width: 100%;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .discount-gift-box {
+    width: 100%;
+  }
+  .card {
+    width: 80%;
+  }
+  .text {
+    font-size: 15px;
+  }
+  .number-box {
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .gift-box-img {
+    width: 70px;
+  }
+  .text {
+    font-size: 15px;
+  }
+  .number-box {
+    font-size: 15px;
+  }
 }

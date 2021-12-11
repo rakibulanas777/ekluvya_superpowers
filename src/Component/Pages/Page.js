@@ -29,12 +29,9 @@ const Page = ({ match }) => {
   return (
     <div className="container">
       <div className="row g-4">
-        <div className="col-md-4">
-          <div
-            className="card border-0 radius"
-            style={{ width: "345px", height: "583px" }}
-          >
-            <img src={profile} className="card-img-top" alt="..." />
+        <div className="col-lg-4 col-10 mx-auto">
+          <div className="card border-0 radius">
+            <img src={profile} className="card-img-top img-fluid" alt="..." />
             <div className="card-body radius">
               <h5 className="card-title mt-3">
                 SAHASRA <br /> Future Doctor
@@ -46,7 +43,7 @@ const Page = ({ match }) => {
             </div>
           </div>
         </div>
-        <div className="col-md-8">
+        <div className="col-lg-7  col-10 mx-auto">
           <div className="page-text-details mb-5">
             <div className="page-title d-flex mb-3 align-items-center">
               <div className="page-title-text me-5">Mega Memory</div>
@@ -81,19 +78,24 @@ const Page = ({ match }) => {
             />
             <input type="submit" className="apply" value="Apply" />
           </div>
-          <div className="discount-gift-section d-flex align-items-start mt-2">
+          <div className="discount-gift-section flex-column d-flex align-items-start mt-2">
             <div className="discount-gift-box d-flex me-4 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
                 Gift now
               </button>
               <div className="img">
-                <img src={gift} width="100px" className="gift-box-img" alt="" />
+                <img
+                  src={gift}
+                  width="100px"
+                  className="gift-box-img img-fluid"
+                  alt=""
+                />
               </div>
               <div className="number">
-                <span className="number-box"> ₹ 1999</span>
+                <span className="number-box">₹ 1999</span>
               </div>
             </div>
-            <div className="discount-money">
+            <div className="discount-money lg-mt-0 mb-5 mt-5">
               <div className="discount">
                 ₹<span className="discount-number-box"> 1499</span>
               </div>
@@ -104,7 +106,7 @@ const Page = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="box d-flex mb-5 align-items-center">
+      <div className="box d-flex mb-5 lg-mt-0  align-items-center">
         <div className="icon-user me-4">
           <i class="fas fa-2x fa-user-friends"></i>
         </div>
