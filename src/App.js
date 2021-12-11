@@ -1,12 +1,11 @@
 import "./App.css";
 import Home from "./Component/Home/Home";
-import Navbar from "./Component/Home/Navbar/Navbar";
 import Carousoul from "./Component/main/Carousoul";
 import Main from "./Component/main/Main";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Page from "./Component/Pages/Page";
-import Test from "./Component/Test";
-import EventTimer from "./Component/Pages/EventTimer";
+import Navbar1 from "./Component/Home/Navbar/Navbar1";
+import Navbar from "./Component/Home/Navbar/Navbar";
 
 function App() {
   return (
@@ -14,12 +13,13 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Navbar />
             <Home></Home>
             <Main />
             <Carousoul />
           </Route>
           <Route exact path="/page/:id">
-            <Navbar />
+            <Navbar1 />
             <Page />
           </Route>
         </Switch>

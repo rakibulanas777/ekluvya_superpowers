@@ -86,7 +86,7 @@ const Sliders = ({ Slidercard }) => {
   const { id, name, img } = Slidercard;
   return (
     <div className="carsol-img">
-      <img src={img} alt="" className="w-75" />
+      <img src={img} alt="" className="w-75 carsol-img-hover" />
 
       <div className="carousel-text w-25">
         {" "}

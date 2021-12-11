@@ -1,9 +1,6 @@
 .carsol-img {
   position: relative;
 }
-.carsol-img:hover {
-  cursor: pointer;
-}
 
 .carousel-text {
   position: absolute;
@@ -23,4 +20,11 @@
 }
 .carusoal {
   margin-top: 10rem;
+}
+.carsol-img-hover:hover {
+  background: url("../../image//Group\ 70.svg");
+  background-size: cover;
+  cursor: pointer;
+  width: 340px;
+  width: 600px;
 }
