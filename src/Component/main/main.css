@@ -18,8 +18,9 @@
   flex-direction: row-reverse;
   align-items: center;
 }
+
 .header-bottom-width {
-  width: 40rem;
+  width: 70%;
   padding: 20px 15px;
   border-radius: 9px 0px 0px 9px;
   background: transparent linear-gradient(278deg, #ff7000 0%, #ec1377 100%) 0%

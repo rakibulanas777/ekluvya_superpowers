@@ -27,8 +27,9 @@ header {
 .main-description {
   color: white;
   font-weight: 400;
-  font-size: 22px;
-  width: 35%;
+  font-size: 20px;
+  width: 40%;
+  text-align: left;
 }
 .main {
   margin-top: 10%;
@@ -55,14 +56,12 @@ header {
     color: white;
     text-transform: uppercase;
   }
-  .main {
-    width: 70%;
-  }
+
   .main-description {
     width: 90%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .main-title-1 {
     font-size: 23px;
     font-weight: 500;
@@ -71,6 +70,7 @@ header {
   }
   .main {
     width: 70%;
+    top: 60%;
   }
   .main-description {
     width: 90%;
