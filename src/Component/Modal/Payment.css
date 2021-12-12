@@ -1,0 +1,43 @@
+.payment-icon {
+  cursor: pointer;
+}
+.payment-title {
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
+}
+.fa-times {
+  font-size: 25px;
+}
+.payment-box {
+  background-color: rgba(230, 230, 230, 0.959);
+  padding: 14px 20px;
+  border-radius: 5px;
+}
+.original-price,
+.original-price-title {
+  font-size: 20px;
+  color: rgb(55, 56, 56);
+  font-weight: 500;
+}
+.amount-price,
+.amount-price-title {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.bottom {
+  border-bottom: 2px solid rgba(199, 198, 198, 0.705);
+}
+.fa-user-tag {
+  color: rgb(107, 16, 110);
+  font-size: 21px;
+}
+.coupon-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+.coupon-icon .fa-chevron-down {
+  color: rgb(30, 16, 110);
+  font-size: 20px;
+}

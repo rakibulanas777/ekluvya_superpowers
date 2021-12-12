@@ -3,16 +3,13 @@ import logo from "../../../image/logo.svg";
 import gift from "../../../image/gift.svg";
 import whatsapp from "../../../image/whatsapp.svg";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar1 = () => {
   const [value, showValue] = useState(false);
   return (
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
+    <nav class="navbar navbar-expand-lg mb-5 sticky-top navbar-light ">
       <div class="container-fluid">
         <div className="logo">
-          <Link to="/">
-            <img src={logo} className="logo-img" alt="" />
-          </Link>
+          <img src={logo} className="logo-img" alt="" />
         </div>
         <button
           class="navbar-toggler"
@@ -28,13 +25,6 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
-              <img
-                src={gift}
-                alt=""
-                className="img-fluid  w-75 gift"
-                srcset=""
-              />
-
               <div className="whatsapp-img">
                 <img
                   src={whatsapp}
@@ -62,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar1;

@@ -1,0 +1,40 @@
+.btn-modal {
+  margin-top: 100px;
+}
+.openPayment {
+  background-color: rgb(88, 88, 88);
+  color: #ffffff;
+  border: none;
+  width: 15rem;
+  padding: 14px;
+  border-radius: 25px;
+}
+.btn-yourname {
+  background-color: rgb(87, 83, 87);
+  color: #ffffff;
+  border: none;
+  width: 15rem;
+  text-align: center;
+  padding: 14px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+.yourname {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  margin-right: 20%;
+}
+.fa-angle-right {
+  color: white;
+  font-size: 25px;
+}
+.openPayment:active {
+  background-color: white;
+  color: tomato;
+}
+.openPayment:hover {
+  background-color: white;
+  color: tomato;
+}
+/*  */

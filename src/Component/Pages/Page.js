@@ -1,35 +1,61 @@
-import React from "react";
+import React, { Component, useEffect, useState } from "react";
 import profile from "../../image/dynamic.png";
 import "./Page.css";
 import play from "../../image/playback.svg";
 import gift from "../../image/vector.svg";
-const Page = () => {
+import LoginModal from "../Modal/LoginModal";
+import VideoModal from "../Modal/VideoModal";
+import { useParams } from "react-router";
+import EventTimer from "./EventTimer";
+const Page = ({ match }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
+
+  const { id } = useParams();
+  console.log(id);
+
+  const [value, getValue] = useState([]);
+  useEffect(() => {
+    fetch("../../../data.json")
+      .then((res) => res.json())
+      .then((data) => getValue(data[id - 1]));
+  }, []);
+
+  const { title, cname, future, join, image, description, amount, discount } =
+    value;
+
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div className="row g-4">
-        <div className="col-md-4">
-          <div
-            className="card border-0 radius"
-            style={{ width: "345px", height: "583px" }}
-          >
-            <img src={profile} className="card-img-top" alt="..." />
+        <div className="col-lg-4 col-10 mx-auto">
+          <div className="card border-0 radius">
+            <img src={image} className="card-img-top img-fluid" alt="..." />
             <div className="card-body radius">
               <h5 className="card-title mt-3">
-                SAHASRA <br /> Future Doctor
+                {cname} <br /> {future}
               </h5>
-              <p className="card-text text-white">
-                “I not only remember all the elements in the periodic table, I
-                can even sing them backwards”
-              </p>
+              <p className="card-text text-white">“{description}”</p>
             </div>
           </div>
         </div>
-        <div className="col-md-8">
+        <div className="col-lg-7  col-10 mx-auto">
           <div className="page-text-details mb-5">
             <div className="page-title d-flex mb-3 align-items-center">
-              <div className="page-title-text me-5">Mega Memory</div>
+              <div className="page-title-text me-5">{title}</div>
               <div className="page-title-img">
-                <img src={play} height="45px" width="45px" alt="" srcset="" />
+                <img
+                  src={play}
+                  onClick={handleOpen2}
+                  height="45px"
+                  width="45px"
+                  alt=""
+                  srcset=""
+                />
               </div>
             </div>
             <div className="page-text-description mb-4">
@@ -52,35 +78,49 @@ const Page = () => {
             />
             <input type="submit" className="apply" value="Apply" />
           </div>
-          <div className="discount-gift-section d-flex align-items-start mt-2">
+          <div className="discount-gift-section flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 align-items-center justify-content-center ">
-              <span className="text">Gift now</span>
+              <button className="text" onClick={handleOpen}>
+                Gift now
+              </button>
               <div className="img">
-                <img src={gift} width="100px" className="gift-box-img" alt="" />
+                <img
+                  src={gift}
+                  width="100px"
+                  className="gift-box-img img-fluid"
+                  alt=""
+                />
               </div>
               <div className="number">
-                <span className="number-box"> ₹ 1999</span>
+                <span className="number-box">₹ {amount}</span>
               </div>
             </div>
-            <div className="discount-money">
+            <div className="discount-money mt-lg-0 mb-lg-0 mb-5 mt-5">
               <div className="discount">
-                ₹<span className="discount-number-box"> 1499</span>
+                ₹<span className="discount-number-box"> {discount}</span>
               </div>
-              <div className="offer">offer expires in</div>
-              <div className="expire-offer">17 : 10 : 40</div>
+              <div className="offer">
+                offer expires in <EventTimer dateevent={value.event} />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="box d-flex mb-5 align-items-center">
+      <div className="box d-flex mb-5 lg-mt-0  align-items-center">
         <div className="icon-user me-4">
           <i class="fas fa-2x fa-user-friends"></i>
         </div>
 
         <div className="box-text">
-          Sahasra + 2758 <br /> kids have joined
+          {join} <br /> kids have joined
         </div>
       </div>
+      <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />
+      <VideoModal
+        openbtn2={handleOpen2}
+        closebtn2={handleClose2}
+        open2={open2}
+      />
     </div>
   );
 };
