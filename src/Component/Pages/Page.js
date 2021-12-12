@@ -26,27 +26,27 @@ const Page = ({ match }) => {
       .then((data) => getValue(data[id - 1]));
   }, []);
 
+  const { title, cname, future, join, image, description, amount, discount } =
+    value;
+
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div className="row g-4">
         <div className="col-lg-4 col-10 mx-auto">
           <div className="card border-0 radius">
-            <img src={profile} className="card-img-top img-fluid" alt="..." />
+            <img src={image} className="card-img-top img-fluid" alt="..." />
             <div className="card-body radius">
               <h5 className="card-title mt-3">
-                SAHASRA <br /> Future Doctor
+                {cname} <br /> {future}
               </h5>
-              <p className="card-text text-white">
-                “I not only remember all the elements in the periodic table, I
-                can even sing them backwards”
-              </p>
+              <p className="card-text text-white">“{description}”</p>
             </div>
           </div>
         </div>
         <div className="col-lg-7  col-10 mx-auto">
           <div className="page-text-details mb-5">
             <div className="page-title d-flex mb-3 align-items-center">
-              <div className="page-title-text me-5">Mega Memory</div>
+              <div className="page-title-text me-5">{title}</div>
               <div className="page-title-img">
                 <img
                   src={play}
@@ -78,7 +78,7 @@ const Page = ({ match }) => {
             />
             <input type="submit" className="apply" value="Apply" />
           </div>
-          <div className="discount-gift-section flex-column d-flex align-items-start mt-2">
+          <div className="discount-gift-section flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
                 Gift now
@@ -92,15 +92,15 @@ const Page = ({ match }) => {
                 />
               </div>
               <div className="number">
-                <span className="number-box">₹ 1999</span>
+                <span className="number-box">₹ {amount}</span>
               </div>
             </div>
-            <div className="discount-money lg-mt-0 mb-5 mt-5">
+            <div className="discount-money mt-lg-0 mb-lg-0 mb-5 mt-5">
               <div className="discount">
-                ₹<span className="discount-number-box"> 1499</span>
+                ₹<span className="discount-number-box"> {discount}</span>
               </div>
               <div className="offer">
-                offer expires in <EventTimer />
+                offer expires in <EventTimer dateevent={value.event} />
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ const Page = ({ match }) => {
         </div>
 
         <div className="box-text">
-          Sahasra + 2758 <br /> kids have joined
+          {join} <br /> kids have joined
         </div>
       </div>
       <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />

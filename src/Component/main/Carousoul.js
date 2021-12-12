@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 import { Link } from "react-router-dom";
+import img3 from "../../image/Group 70.svg";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -38,16 +39,15 @@ const Carousoul = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    arrows: false,
+    slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
@@ -56,7 +56,7 @@ const Carousoul = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           initialSlide: 2,
         },
       },
@@ -70,7 +70,7 @@ const Carousoul = () => {
     ],
   };
   return (
-    <div className="container carusoal">
+    <div className="container mb-5 carusoal">
       <Slider {...settings}>
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
@@ -83,15 +83,18 @@ const Carousoul = () => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard }) => {
-  const { id, name, img } = Slidercard;
+  const { id, fname, lname, img } = Slidercard;
   return (
-    <div className="carsol-img">
-      <img src={img} alt="" className="w-75 carsol-img-hover" />
+    <div className="carsol-img w-75">
+      <div className="img-carosoul">
+        <img src={img3} className="hover" alt="" />
+      </div>
+      <img src={img} alt="" className="img-fluid carsol-img-hover" />
 
-      <div className="carousel-text w-25">
+      <div className="carousel-text">
         {" "}
         <Link to={`/page/${id}`} className="link">
-          {name}
+          {fname} <br /> {lname}
         </Link>
       </div>
     </div>

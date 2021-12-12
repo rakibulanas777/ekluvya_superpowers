@@ -3,6 +3,11 @@
   height: 50px;
   cursor: pointer;
 }
+.logo-img1 {
+  width: 300px;
+  cursor: pointer;
+  height: 90px;
+}
 .whats-app-click1 {
   background-color: #ffffff;
   border-radius: 20px;
@@ -16,7 +21,7 @@
   width: 70%;
 }
 @media (max-width: 560px) {
-  .logo-img {
+  .logo-img1 {
     width: 100%;
   }
 }
@@ -26,8 +31,8 @@
   }
 }
 @media (max-width: 390px) {
-  .logo-img {
-    width: 80%;
+  .logo-img1 {
+    width: 60%;
   }
   .whatsapp1 {
     width: 80%;

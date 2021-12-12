@@ -1,37 +1,92 @@
 [
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 1,
-
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   },
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 2,
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   },
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 3,
-
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   },
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 4,
-
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   },
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 5,
-
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   },
   {
-    "name": "Kieran Warwick",
+    "fname": "Mega",
+    "lname": "Memory",
+    "title": "Mega Memory",
+    "cname": "SAHASRA",
+    "future": "Future Doctor",
+    "join": "Sahasra + 2758",
     "id": 6,
-
-    "img": "https://i.ibb.co/jLyvBMv/Group-61.png"
+    "img": "https://i.ibb.co/jLyvBMv/Group-61.png",
+    "image": "https://i.ibb.co/P1kWT7x/dynamic.png",
+    "description": "I not only remember all the elements in the periodic table, Ican even sing them backwards",
+    "amount": "1186",
+    "discount": "233",
+    "event": "Dec 14,2021"
   }
 ]

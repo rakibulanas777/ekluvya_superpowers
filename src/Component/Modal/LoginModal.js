@@ -36,11 +36,11 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
         <Box sx={style} className="mb-5">
           <div className="btn-modal d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center">
             <div className="guest-btn-modal">
-              <button className="openPayment lg-me-5 me-0" onClick={handleOpen}>
+              <button className="openPayment me-lg-5 me-0" onClick={handleOpen}>
                 Continue as Guest
               </button>
             </div>
-            <div className="login-btn-modal ms-0 mt-5 lg-mt-0 lg-ms-5">
+            <div className="login-btn-modal ms-0 mt-5 mt-lg-0 ms-lg-5">
               <button className="openPayment" onClick={() => showValue(!value)}>
                 Log in to Gift
               </button>
@@ -49,25 +49,25 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
                 <div className="show-extra d-block">
                   <div className="btn-yourname mt-3 mb-3">
                     <button className="yourname" onClick={handleOpen}>
-                      Log in to Gift
+                      Your name
                     </button>
                     <i class="fas fa-angle-right"></i>
                   </div>
                   <div className="btn-yourname mt-3 mb-3">
                     <button className="yourname" onClick={handleOpen}>
-                      Log in to Gift
+                      Mobile
                     </button>
                     <i class="fas fa-angle-right"></i>
                   </div>
                   <div className="btn-yourname mt-3 mb-3">
                     <button className="yourname" onClick={handleOpen}>
-                      Log in to Gift
+                      Email
                     </button>
                     <i class="fas fa-angle-right"></i>
                   </div>
                   <div className="btn-yourname mt-3 mb-3">
                     <button className="yourname" onClick={handleOpen}>
-                      Log in to Gift
+                      Otp
                     </button>
                   </div>
                 </div>

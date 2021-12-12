@@ -3,13 +3,16 @@ import logo from "../../../image/logo.svg";
 import gift from "../../../image/gift.svg";
 import whatsapp from "../../../image/whatsapp.svg";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [value, showValue] = useState(false);
   return (
     <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
       <div class="container-fluid">
         <div className="logo">
-          <img src={logo} className="logo-img" alt="" />
+          <Link to="/">
+            <img src={logo} className="logo-img" alt="" />
+          </Link>
         </div>
         <button
           class="navbar-toggler"
@@ -20,9 +23,7 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">

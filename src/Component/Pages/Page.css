@@ -14,8 +14,6 @@
 }
 .card {
   background-color: #242424;
-  width: 345px;
-  height: 583px;
 }
 .card-body {
   position: relative;
@@ -109,8 +107,9 @@
   color: #e61277;
   font-size: 21px;
   font-weight: 600;
-  position: relative;
-  left: 15%;
+  position: absolute;
+
+  left: 23%;
 }
 @media (max-width: 520px) {
   .discount-gift-box {
@@ -120,7 +119,7 @@
     font-size: 20px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 390px) {
   .discount-gift-box {
     width: 100%;
   }
@@ -132,6 +131,11 @@
   }
   .number-box {
     font-size: 15px;
+  }
+  .box {
+    left: 0%;
+    margin: 0 auto;
+    width: 90%;
   }
 }
 @media (max-width: 350px) {
