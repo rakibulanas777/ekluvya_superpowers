@@ -3,6 +3,7 @@ import profile from "../../image/dynamic.png";
 import "./Page.css";
 import play from "../../image/playback.svg";
 import gift from "../../image/vector.svg";
+import image1 from "../../image/Path 69.svg";
 import LoginModal from "../Modal/LoginModal";
 import VideoModal from "../Modal/VideoModal";
 import { useParams } from "react-router";
@@ -30,8 +31,11 @@ const Page = ({ match }) => {
     value;
 
   return (
-    <div className="container mb-5">
-      <div className="row g-4">
+    <div className="container">
+      <div className="img-arrow-icon mb-5 text-center">
+        <img src={image1} width="16px" alt="" />
+      </div>
+      <div className="row g-4 mb-5">
         <div className="col-lg-4 col-10 mx-auto">
           <div className="card border-0 radius">
             <img src={image} className="card-img-top img-fluid" alt="..." />
@@ -53,9 +57,11 @@ const Page = ({ match }) => {
                   onClick={handleOpen2}
                   height="45px"
                   width="45px"
+                  className="play-icon"
                   alt=""
                   srcset=""
                 />
+                <span>Watch tailor</span>
               </div>
             </div>
             <div className="page-text-description mb-4">

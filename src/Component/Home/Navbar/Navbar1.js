@@ -6,7 +6,7 @@ import "./Navbar.css";
 const Navbar1 = () => {
   const [value, showValue] = useState(false);
   return (
-    <nav class="navbar navbar-expand-lg mb-5 sticky-top navbar-light ">
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-light ">
       <div class="container-fluid">
         <div className="logo">
           <img src={logo} className="logo-img" alt="" />

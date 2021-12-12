@@ -16,23 +16,28 @@ const Main = () => {
             </div>
           </div>
           <div className="header-bottom-img">
-            <img src={giftcard} width="100" alt="" />
+            <img src={giftcard} className="img-fluid" width="105px" alt="" />
           </div>
         </div>
       </div>
       <div className="container  main-section-2  mb-5">
         <div className="row">
           <div className="col-10 col-md-5  mx-auto">
-            <div className="main-text">
-              On an average, only 1% crack the UPSC, 2% make it to the IITs,
-              just 2% get into the NID and a mere 0.4% get into the IIMs <br />{" "}
+            <div className="main-text mb-lg-0 mb-5">
+              On an average, <br /> only 1% crack the UPSC, <br /> 2% make it to
+              the IITs, <br />
+              just 2% get into the NID <br /> and a mere 0.4% get into the IIMs{" "}
+              <br /> <br />
+              To beat competition that’s this fierce, <br /> kids need super
+              powers
               <br />
-              To beat competition that’s this fierce, kids need super powers
-              <br />
-              <br /> In just 30 days, your kid could master one of these super
-              powers :
-              <div className="icon-arrow mt-5 ms-5">
-                <img src={arrow} width="23px" alt="" />
+              <br /> In just 30 days, your kid could master <br /> one of these
+              super powers :
+              <div
+                className="icon-arrow d-lg-block d-none mt-5"
+                style={{ marginLeft: "30%" }}
+              >
+                <img src={arrow} width="16px" alt="" />
               </div>
             </div>
           </div>

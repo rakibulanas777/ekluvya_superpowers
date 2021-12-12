@@ -11,12 +11,13 @@ const Home = () => {
         <div className="main-title">BITTER TRUTH</div>
         <div className="main-title-1 ">The future is a game</div>
         <div className="main-description mb-4">
-          Where the rules can be changed by anyone, at anytime
+          Where the rules can be changed <br /> by anyone, at anytime
           <br />
           <br />
-          For a future that’s so unpredictable how do we school our kids ?
-          <div className="icon-arrow mt-5 ms-5">
-            <img src={arrow} width="23px" alt="" />
+          For a future that’s so unpredictable <br /> how do we school our kids
+          ?
+          <div className="icon-arrow mt-5" style={{ marginLeft: "40%" }}>
+            <img src={arrow} width="16px" alt="" />
           </div>
         </div>
       </div>
