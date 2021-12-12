@@ -15,9 +15,9 @@ const Main = () => {
               gift your kids skills <br /> that aren’t taught at schools
             </div>
           </div>
-          <div className="header-bottom-img">
-            <img src={giftcard} className="img-fluid" width="105px" alt="" />
-          </div>
+          {/* <div className="header-bottom-img"> */}
+            <img src={giftcard} height="200" alt="" />
+          {/* </div> */}
         </div>
       </div>
       <div className="container  main-section-2  mb-5">
