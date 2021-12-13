@@ -15,7 +15,16 @@ function loadScript(src) {
   });
 }
 
-export async function displayRazorpay() {
+export async function displayRazorpay({
+  course_name = "Course",
+  course_id = "123",
+  class_id = "234",
+  board_id="345",
+  user_id="1",
+  name="",
+  email="",
+  phone_number="",
+}) {
   const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
   if (!res) {
@@ -39,14 +48,10 @@ export async function displayRazorpay() {
     amount: amount.toString(),
     currency: currency,
     name: "Ekluvya",
-    description: "Course", // course name
+    description: course_name, // course name
     image: { logo },
     order_id: order_id,
-    boardId: "123", // make a dynamic
-    classId: "345", // make a dynamic
-    courseId: "567", // make a dynamic
     isNonAcademicCourse: true,
-    // user_id:"",
     handler: async function (response) {
       console.log({ response });
       const data = {
@@ -64,13 +69,16 @@ export async function displayRazorpay() {
       alert(result.data.msg);
     },
     prefill: {
-      name: "AK",
-      email: "amitkadivar.ce@gmail.com",
-      contact: "9999999999",
+      name: name || "AK",
+      email: email || "amitkadivar.ce@gmail.com",
+      contact: phone_number|| "9999999999",
     },
     notes: {
       address: "ak",
-      user_id: "", // make a dynamic
+      user_id: user_id, // make a dynamic
+      boardId: board_id, // make a dynamic
+      classId: class_id, // make a dynamic
+      courseId: course_id, // make a dynamic
     },
     theme: {
       color: "#FF7000",
