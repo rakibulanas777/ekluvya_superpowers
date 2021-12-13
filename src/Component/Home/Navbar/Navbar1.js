@@ -5,6 +5,8 @@ import whatsapp from "../../../image/whatsapp.svg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar1 = () => {
+  const [number, setNumber] = useState("");
+
   const [value, showValue] = useState(false);
   return (
     <nav class="navbar navbar-expand-lg  sticky-top navbar-dark ">
@@ -31,14 +33,24 @@ const Navbar1 = () => {
                   src={whatsapp}
                   className="img-fluid whatsapp "
                   alt=""
-                  onClick={() => showValue(!value)}
+                  onClick={() => {
+                    showValue(!value);
+                    setNumber();
+                  }}
                   srcset=""
                 />
                 {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
-                    <input type="text" />
+                    <input
+                      type="text"
+                      onChange={(e) => setNumber(e.target.value)}
+                    />
                     <div className="whatsapp-arrow">
-                      <a href="https://www.whatsapp.com/" target="_blank">
+                      <a
+                        href={`https://wa.me/${number}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <i class="fas fa-angle-right"></i>
                       </a>
                     </div>

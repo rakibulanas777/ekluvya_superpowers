@@ -19,8 +19,6 @@ const style = {
   p: 4,
 };
 
-
-
 const LoginModal = ({ openbtn, closebtn, open }) => {
   const [value, showValue] = useState(false);
 
@@ -38,46 +36,69 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
       >
         <Box sx={style} className="mb-5">
           <div className="btn-modal d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center">
-            <div className="guest-btn-modal">
+            {/* <div className="guest-btn-modal">
               <button
                 className="openPayment me-lg-5 me-0"
                 onClick={displayRazorpay}
               >
                 Continue as Guest
               </button>
-            </div>
+            </div> */}
             <div className="login-btn-modal ms-0 mt-5 mt-lg-0 ms-lg-5">
-              <button className="openPayment" onClick={() => showValue(!value)}>
-                Log in to Gift
-              </button>
-              {console.log(value)}
-              {value && (
-                <div className="show-extra d-block">
-                  <div className="btn-yourname mt-3 mb-3">
-                    <button className="yourname" onClick={handleOpen}>
-                      Your name
-                    </button>
-                    <i class="fas fa-angle-right"></i>
-                  </div>
-                  <div className="btn-yourname mt-3 mb-3">
-                    <button className="yourname" onClick={handleOpen}>
-                      Mobile
-                    </button>
-                    <i class="fas fa-angle-right"></i>
-                  </div>
-                  <div className="btn-yourname mt-3 mb-3">
-                    <button className="yourname" onClick={handleOpen}>
-                      Email
-                    </button>
-                    <i class="fas fa-angle-right"></i>
-                  </div>
-                  <div className="btn-yourname mt-3 mb-3">
-                    <button className="yourname" onClick={handleOpen}>
-                      Otp
-                    </button>
-                  </div>
+              <div className=" d-flex justify-content-center">
+                {/* this is for display info */}
+                <button className="openPayment mb-5">User Info</button>
+              </div>
+
+              <div
+                className="show-extra"
+                style={{ display: "flex", gap: "5px" }}
+              >
+                <div className="btn-yourname ">
+                  {/* this is input */}
+                  <button className="yourname" onClick={handleOpen}>
+                    Your name
+                  </button>
+                  <i class="fas fa-angle-right"></i>
                 </div>
-              )}
+                {/* this is input */}
+
+                <div className="btn-yourname ">
+                  <button className="yourname" onClick={handleOpen}>
+                    Mobile
+                  </button>
+                  <i class="fas fa-angle-right"></i>
+                </div>
+                {/* this is input */}
+
+                <div className="btn-yourname ">
+                  <button className="yourname" onClick={handleOpen}>
+                    Email
+                  </button>
+                  <i class="fas fa-angle-right"></i>
+                </div>
+
+                {/* This is the button  */}
+                <div className="btn-yourname ">
+                  <button className="yourname" onClick={handleOpen}>
+                    Send Otp
+                  </button>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: "5px", marginTop: "50px" }}>
+                <div className="btn-yourname ">
+                  {/* this is input */}
+                  <button className="yourname" onClick={handleOpen}>
+                    Enter otp
+                  </button>
+                  <i class="fas fa-angle-right"></i>
+                </div>
+                {/* This is the button */}
+                <div className="btn-yourname ">
+                  <button className="yourname">Verify</button>
+                </div>
+              </div>
             </div>
           </div>
         </Box>

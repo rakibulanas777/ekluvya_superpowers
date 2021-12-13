@@ -88,6 +88,7 @@ const Carousoul = ({ onClick }) => {
   };
   return (
     <div className="container-fluid mb-5 carusoal">
+      <a name="gift"></a>
       <Slider {...settings} className="mb-5">
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
@@ -109,7 +110,10 @@ const Sliders = ({ Slidercard }) => {
     <div className="img_parent">
       <span className="img_parent_hover">
         <Link to={`/page/${id}`} className="link">
-          <img src={img3} alt="" width="100%" className="image1 img-fluid" />
+          <div className="image1">
+            <img src={img3} alt="" width="100%" className=" img-fluid" />
+            <p className="w-60 text-white">{hover}</p>
+          </div>
           <div>
             <div className="carousel-text">
               {" "}
@@ -118,7 +122,6 @@ const Sliders = ({ Slidercard }) => {
               </Link>
             </div>
             <img src={img} alt="" className="image2" />
-            <span className=" w-75 text-white">{hover}</span>
           </div>
         </Link>
       </span>

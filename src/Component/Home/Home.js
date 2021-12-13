@@ -22,7 +22,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <a name="gift"></a>
+        
       </div>
     </header>
   );
