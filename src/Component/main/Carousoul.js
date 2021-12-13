@@ -41,7 +41,7 @@ const Carousoul = ({ onClick }) => {
     slidesToShow: 4,
     arrows: false,
     slidesToScroll: 4,
-    initialSlide: 0,
+    initialSlide: 4,
     responsive: [
       {
         breakpoint: 1024,
@@ -50,6 +50,7 @@ const Carousoul = ({ onClick }) => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          initialSlide: 3,
         },
       },
       {
@@ -65,6 +66,7 @@ const Carousoul = ({ onClick }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],
@@ -87,25 +89,28 @@ const Carousoul = ({ onClick }) => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard }) => {
-  const { id, fname, lname, img } = Slidercard;
+  const { id, fname, lname, img, hover } = Slidercard;
   return (
     <div className="carsol-img w-75">
-      <div className="img-carosoul">
-        <img src={img3} className="hover" alt="" />
-      </div>
-      <img
-        src={img}
-        alt=""
-        width="266px"
-        height="271px"
-        className="img-fluid carsol-img-hover"
-      />
+      <div className="main-img-hover">
+        <img
+          src={img}
+          alt=""
+          width="200px"
+          height="176px"
+          className="img-fluid carsol-img-hover"
+        />
 
-      <div className="carousel-text">
-        {" "}
-        <Link to={`/page/${id}`} className="link">
-          {fname} <br /> {lname}
-        </Link>
+        <div className="carousel-text">
+          {" "}
+          <Link to={`/page/${id}`} className="link">
+            {fname} <br /> {lname}
+          </Link>
+        </div>
+      </div>
+      <div className="img-carosoul">
+        <img src={img3} className="hover w-75" alt="" />
+        <div className="text-hover w-75 text-white">{hover}</div>
       </div>
     </div>
   );

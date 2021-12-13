@@ -18,6 +18,12 @@ function App() {
             <Main />
             <Carousoul />
           </Route>
+          <Route exact path="/home">
+            <Navbar />
+            <Home></Home>
+            <Main />
+            <Carousoul />
+          </Route>
           <Route exact path="/page/:id">
             <Navbar1 />
             <Page />

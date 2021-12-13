@@ -22,9 +22,6 @@ const Main = () => {
         </div>
       </div>
       <div className="container-fluid main-video">
-        <div className="video-main mb-5">
-          <video src={video} className="video" autoPlay loop muted></video>
-        </div>
         <div className="container  main-section-2  mb-5">
           <div className="row">
             <div className="col-10 col-lg-5  mx-auto">
@@ -46,13 +43,22 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <div className="col-10 text-center col-lg-5 mx-auto">
+            <div className="col-10 text-center logopart col-lg-7 mx-auto">
+              <div className="video-main mx-auto">
+                <video
+                  src={video}
+                  className="video embed-responsive-item"
+                  autoPlay
+                  loop
+                  muted
+                ></video>
+              </div>
               <div className="main-img">
                 <img
                   src={img}
                   width="385px"
                   height="250px"
-                  className="img-fluid"
+                  className="img-fluid img-logo-main"
                   alt=""
                 />
               </div>

@@ -9,7 +9,7 @@ const Home = () => {
     <header>
       <div className="main container d-flex flex-column justify-content-center">
         <div className="main-title">BITTER TRUTH</div>
-        <div className="main-title-1 ">The future is a game</div>
+        <div className="main-title-1">The future is a game</div>
         <div className="main-description mb-4">
           Where the rules can be changed <br /> by anyone, at anytime
           <br />
