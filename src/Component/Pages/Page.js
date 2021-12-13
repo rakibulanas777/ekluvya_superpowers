@@ -56,7 +56,7 @@ const Page = ({ match }) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-9  col-10 mx-auto">
+        <div className="col-lg-8  col-10 mx-auto">
           <div className="page-text-details mb-4">
             <div className="page-title d-flex mb-3 align-items-center">
               <div className="page-title-text me-5">{title}</div>
@@ -85,7 +85,7 @@ const Page = ({ match }) => {
               Gift them a super power that they’ll never forget.
             </div>
             <div className="page-last-text">
-              Future greatness @ the cost of a family dinner
+              <b>Future greatness @ the cost of a family dinner</b>
             </div>
           </div>
           <div className="page-promo-code mb-5">
