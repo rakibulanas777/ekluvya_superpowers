@@ -37,11 +37,11 @@
 .img-carosoul {
   position: absolute;
   top: 0;
-  margin-bottom: 40%;
 }
 
 .img-carosoul-hover {
   position: relative;
+  background-color: #010001;
 }
 .text-hover {
   position: absolute;
@@ -49,7 +49,7 @@
   font-size: 17px;
   font-size: 600;
   left: 15%;
-  top: 50%;
+  display: none;
 }
 .hover:hover {
   opacity: 0.3;
