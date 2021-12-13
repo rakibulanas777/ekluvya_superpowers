@@ -6,8 +6,8 @@
 }
 .carousel-text {
   position: absolute;
-  left: 17%;
-  bottom: 10%;
+  left: 25%;
+  bottom: 15%;
   letter-spacing: 0.88px;
   font-size: 20px;
   color: white;
@@ -37,11 +37,13 @@
 .img-carosoul {
   position: absolute;
   top: 0;
+  left: 0;
+  /* opacity: 0.80; */
 }
 
 .img-carosoul-hover {
   position: relative;
-  background-color: #010001;
+  /* background-color: #010001; */
 }
 .text-hover {
   position: absolute;
@@ -52,7 +54,7 @@
   display: none;
 }
 .hover:hover {
-  opacity: 0.3;
+  /* opacity: 0.3; */
   border-radius: 15px;
 }
 /* .carsol-img-hover::before {
@@ -77,3 +79,39 @@
   background: url("../../image//Group\ 70.svg");
   opacity: 1;
 } */
+.img_parent_hover:hover{
+    cursor: pointer;
+}
+.img_parent_hover:hover .image2 {
+  transition: 0.3s opacity linear;
+  opacity: 0.1;
+  border: none;
+}
+
+.img_parent_hover:hover .image1 {
+  transition: 0.3s opacity linear;
+  opacity: 1;
+  border: none;
+}
+.img_parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px solid #000000;
+  opacity: 0;
+}
+
+.image2 {
+  position: absolute;
+  top: 115px;
+  left: 75px;
+  border: 1px solid #000000;
+}
+
+

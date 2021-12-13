@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 import { Link } from "react-router-dom";
-import img3 from "../../image/Group 70.svg";
+import img3 from "../../image/Gift_hover.svg";
+import topGift from "../../image/top_gift.svg";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -91,29 +93,74 @@ export default Carousoul;
 const Sliders = ({ Slidercard }) => {
   const { id, fname, lname, img, hover } = Slidercard;
   return (
-    <div className="carsol-img w-75">
-      <div className="main-img-hover">
-        <img
-          src={img}
-          alt=""
-          width="200px"
-          height="176px"
-          className="img-fluid  carsol-img-hover"
-        />
+    <div className="img_parent">
+      <span className="img_parent_hover">
+        <Link to={`/page/${id}`} className="link">
+          
+          <img
+            src={img3}
+            alt=""
+            width="350px"
+            height="176px"
+            className="image1 img-fluid"
+            // className="img-fluid  carsol-img-hover"
+          />
+          <div>
+         <div className="carousel-text">
+           {" "}
+           <Link to={`/page/${id}`} className="link">
+             {fname} <br /> {lname}
+           </Link>
+         </div>
+          <img
+            src={img}
+            alt=""
+            width="170px"
+            height="176px"
+            className="image2 img-fluid"
 
-        <div className="carousel-text">
-          {" "}
-          <Link to={`/page/${id}`} className="link">
-            {fname} <br /> {lname}
-          </Link>
-        </div>
-      </div>
-      <div className="img-carosoul">
-        <div className="img-carosoul-hover">
-          <img src={img3} className="hover" width="200" height="206" alt="" />
-          <div className="text-hover w-75 text-white">{hover}</div>
-        </div>
-      </div>
+            // className="img-fluid  carsol-img-hover"
+          />
+          </div>
+        </Link>
+      </span>
     </div>
+    // <div className="carsol-img w-75">
+    //   <div className="main-img-hover">
+    // <img
+    //   src={img3}
+    //   alt=""
+    //   width="200px"
+    //   height="176px"
+    //   className="img-fluid  carsol-img-hover"
+    // />
+
+    //     <div className="carousel-text">
+    //       {" "}
+    //       <Link to={`/page/${id}`} className="link">
+    //         {fname} <br /> {lname}
+    //       </Link>
+    //     </div>
+    //     <img
+    //       src={img}
+    //       className="img-carosoul hover"
+    //       width="100%"
+    //       height="200px"
+    //       alt=""
+    //     />
+    //   </div>
+    //   {/* <div className="img-carosoul">
+    //     <div className="img-carosoul-hover"> */}
+    //   {/* <img
+    //         src={img3}
+    //         className="hover"
+    //         width="250px"
+    //         height="250px"
+    //         alt=""
+    //       /> */}
+    //   {/* <div className="text-hover w-75 text-white">{hover}</div> */}
+    //   {/* </div>
+    //   </div> */}
+    // </div>
   );
 };
