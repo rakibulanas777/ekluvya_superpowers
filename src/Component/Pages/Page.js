@@ -32,11 +32,11 @@ const Page = ({ match }) => {
     value;
 
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div className="img-arrow-icon mb-5 text-center">
         <img src={image1} width="16px" alt="" />
       </div>
-      <div className="row  mb-5 card-part ">
+      <div className="row  g-4 card-part ">
         <div className="col-lg-3 col-10 mx-auto">
           <div className="card border-0 radius">
             <img src={image} className="card-img-top img-fluid" alt="..." />
@@ -60,15 +60,20 @@ const Page = ({ match }) => {
           <div className="page-text-details mb-4">
             <div className="page-title d-flex mb-3 align-items-center">
               <div className="page-title-text me-5">{title}</div>
-              <div className="page-title-img">
-                <img
-                  src={play}
-                  onClick={handleOpen2}
-                  className="play-icon"
-                  alt=""
-                  srcset=""
-                />
-                <span className="tailor">Watch tailor</span>
+              <div className="wrapper">
+                <div class="button">
+                  <div class="icon">
+                    <img
+                      src={play}
+                      onClick={handleOpen2}
+                      className="play-icon"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <span>Watch tailor</span>
+                </div>
+                {/* <span className="tailor">Watch tailor</span> */}
               </div>
             </div>
             <div className="page-text-description mb-3">

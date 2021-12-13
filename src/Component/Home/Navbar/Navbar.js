@@ -28,13 +28,14 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
-              <img
-                src={gift}
-                alt=""
-                className="img-fluid  w-75 gift"
-                srcset=""
-              />
-
+              <a href="#gift">
+                <img
+                  src={gift}
+                  alt=""
+                  className="img-fluid  w-75 gift"
+                  srcset=""
+                />
+              </a>
               <div className="whatsapp-img">
                 <img
                   src={whatsapp}
