@@ -56,46 +56,39 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
               >
                 <div className="btn-yourname ">
                   {/* this is input */}
-                  <button className="yourname" onClick={handleOpen}>
-                    Your name
-                  </button>
+                  <button className="yourname">Your name</button>
                   <i class="fas fa-angle-right"></i>
                 </div>
                 {/* this is input */}
 
                 <div className="btn-yourname ">
-                  <button className="yourname" onClick={handleOpen}>
-                    Mobile
-                  </button>
+                  <button className="yourname">Mobile</button>
                   <i class="fas fa-angle-right"></i>
                 </div>
                 {/* this is input */}
 
                 <div className="btn-yourname ">
-                  <button className="yourname" onClick={handleOpen}>
-                    Email
-                  </button>
+                  <button className="yourname">Email</button>
                   <i class="fas fa-angle-right"></i>
                 </div>
 
                 {/* This is the button  */}
                 <div className="btn-yourname ">
-                  <button className="yourname" onClick={handleOpen}>
-                    Send Otp
-                  </button>
+                  <button className="yourname">Send Otp</button>
                 </div>
               </div>
 
               <div style={{ display: "flex", gap: "5px", marginTop: "50px" }}>
                 <div className="btn-yourname ">
                   {/* this is input */}
-                  <button className="yourname" onClick={handleOpen}>
-                    Enter otp
-                  </button>
+                  <button className="yourname">Enter otp</button>
                   <i class="fas fa-angle-right"></i>
                 </div>
                 {/* This is the button */}
-                <div className="btn-yourname ">
+                <div
+                  className="btn-yourname "
+                  onClick={() => displayRazorpay({})}
+                >
                   <button className="yourname">Verify</button>
                 </div>
               </div>

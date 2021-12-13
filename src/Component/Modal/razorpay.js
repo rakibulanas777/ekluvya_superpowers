@@ -33,7 +33,7 @@ export async function displayRazorpay({
   }
 
   // creating a new order
-  const result = await axios.post("http://localhost:5001/payment/orders");
+  const result = await axios.post("https://ekluvya.loca.lt/payment/orders");
 
   if (!result) {
     alert("Server error. Are you online?");
@@ -62,7 +62,7 @@ export async function displayRazorpay({
       };
 
       const result = await axios.post(
-        "http://localhost:5001/payment/success",
+        "https://ekluvya.loca.lt/payment/success",
         data
       );
 
