@@ -40,11 +40,22 @@ const Carousoul = ({ onClick }) => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 8,
     arrows: false,
-    slidesToScroll: 4,
+    slidesToScroll: 8,
     initialSlide: 4,
+    // width:"300px",
     responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true,
+          initialSlide: 4,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -52,7 +63,7 @@ const Carousoul = ({ onClick }) => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
-          initialSlide: 3,
+          initialSlide: 4,
         },
       },
       {
@@ -60,21 +71,23 @@ const Carousoul = ({ onClick }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide: 3,
+          infinite: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
         },
       },
     ],
   };
   return (
-    <div className="container mb-5 carusoal">
+    <div className="container-fluid mb-5 carusoal">
       <Slider {...settings} className="mb-5">
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
@@ -100,8 +113,7 @@ const Sliders = ({ Slidercard }) => {
           <img
             src={img3}
             alt=""
-            width="350px"
-            height="176px"
+            width="100%"
             className="image1 img-fluid"
             // className="img-fluid  carsol-img-hover"
           />
@@ -115,9 +127,8 @@ const Sliders = ({ Slidercard }) => {
           <img
             src={img}
             alt=""
-            width="170px"
-            height="176px"
-            className="image2 img-fluid"
+
+            className="image2"
 
             // className="img-fluid  carsol-img-hover"
           />
