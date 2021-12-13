@@ -26,7 +26,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const Carousoul = () => {
+const Carousoul = ({ onClick }) => {
   const [value, getValue] = useState([]);
   useEffect(() => {
     fetch("../../../data.json")
@@ -71,11 +71,15 @@ const Carousoul = () => {
   };
   return (
     <div className="container mb-5 carusoal">
-      <Slider {...settings}>
+      <Slider {...settings} className="mb-5">
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
         ))}
       </Slider>
+      <div className="arrow-icon-carrosoul text-center d-flex justify-content-around  mx-auto">
+        <i class="fas fa-chevron-left" onClick={onClick}></i>
+        <i class="fas fa-chevron-right"></i>
+      </div>
     </div>
   );
 };

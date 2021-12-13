@@ -12,6 +12,10 @@
   font-weight: 600;
   z-index: 5000;
 }
+.arrow-icon-carrosoul {
+  width: 14%;
+  cursor: pointer;
+}
 .link {
   text-decoration: none;
   color: white;
@@ -19,7 +23,10 @@
 .link:hover {
   color: white;
 }
-
+.fa-chevron-left,
+.fa-chevron-right {
+  color: #e61b67;
+}
 .scroll {
   overflow: auto;
   white-space: nowrap;

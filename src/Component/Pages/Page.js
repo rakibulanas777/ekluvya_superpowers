@@ -2,7 +2,8 @@ import React, { Component, useEffect, useState } from "react";
 import profile from "../../image/dynamic.png";
 import "./Page.css";
 import play from "../../image/playback.svg";
-import gift from "../../image/vector.svg";
+import gift from "../../image/Group 113.svg";
+import line from "../../image/Line 1.svg";
 import image1 from "../../image/Path 69.svg";
 import LoginModal from "../Modal/LoginModal";
 import VideoModal from "../Modal/VideoModal";
@@ -35,36 +36,42 @@ const Page = ({ match }) => {
       <div className="img-arrow-icon mb-5 text-center">
         <img src={image1} width="16px" alt="" />
       </div>
-      <div className="row g-4 mb-5">
-        <div className="col-lg-4 col-10 mx-auto">
+      <div className="row  mb-5 card-part ">
+        <div className="col-lg-3 col-10 mx-auto">
           <div className="card border-0 radius">
             <img src={image} className="card-img-top img-fluid" alt="..." />
             <div className="card-body radius">
-              <h5 className="card-title mt-3">
+              <h5 className="card-title">
                 {cname} <br /> {future}
               </h5>
               <p className="card-text text-white">“{description}”</p>
             </div>
+            <div className="box d-flex mb-3 lg-mt-0  align-items-center">
+              <div className="icon-user me-1">
+                <i class="fas fa-2x fa-user-friends"></i>
+              </div>
+              <div className="box-text">
+                {join} <br /> kids have joined
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-lg-7  col-10 mx-auto">
-          <div className="page-text-details mb-5">
+        <div className="col-lg-9  col-10 mx-auto">
+          <div className="page-text-details mb-4">
             <div className="page-title d-flex mb-3 align-items-center">
               <div className="page-title-text me-5">{title}</div>
               <div className="page-title-img">
                 <img
                   src={play}
                   onClick={handleOpen2}
-                  height="45px"
-                  width="45px"
                   className="play-icon"
                   alt=""
                   srcset=""
                 />
-                <span>Watch tailor</span>
+                <span className="tailor">Watch tailor</span>
               </div>
             </div>
-            <div className="page-text-description mb-4">
+            <div className="page-text-description mb-3">
               Good grades are dependent on how much your kids remember in an
               exam.
               <br />
@@ -92,13 +99,17 @@ const Page = ({ match }) => {
               <div className="img">
                 <img
                   src={gift}
-                  width="100px"
+                  width="80px"
                   className="gift-box-img img-fluid"
+                  onClick={handleOpen}
                   alt=""
                 />
               </div>
               <div className="number">
-                <span className="number-box">₹ {amount}</span>
+                <span className="number-box">
+                  <img src={line} className="line" alt="" />{" "}
+                  <span>₹ {amount}</span>
+                </span>
               </div>
             </div>
             <div className="discount-money mt-lg-0 mb-lg-0 mb-5 mt-5">
@@ -112,15 +123,7 @@ const Page = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="box d-flex mb-5 lg-mt-0  align-items-center">
-        <div className="icon-user me-4">
-          <i class="fas fa-2x fa-user-friends"></i>
-        </div>
 
-        <div className="box-text">
-          {join} <br /> kids have joined
-        </div>
-      </div>
       <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />
       <VideoModal
         openbtn2={handleOpen2}
