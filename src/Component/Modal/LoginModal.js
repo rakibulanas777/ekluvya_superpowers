@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./LoginModal.css";
 import Payment from "./Payment";
+import { displayRazorpay } from "./razorpay";
 const style = {
   position: "absolute",
   top: "50%",
@@ -17,6 +18,8 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
+
 
 const LoginModal = ({ openbtn, closebtn, open }) => {
   const [value, showValue] = useState(false);
@@ -36,7 +39,10 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
         <Box sx={style} className="mb-5">
           <div className="btn-modal d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center">
             <div className="guest-btn-modal">
-              <button className="openPayment me-lg-5 me-0" onClick={handleOpen}>
+              <button
+                className="openPayment me-lg-5 me-0"
+                onClick={displayRazorpay}
+              >
                 Continue as Guest
               </button>
             </div>
