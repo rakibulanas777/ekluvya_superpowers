@@ -217,6 +217,13 @@
   .text {
     font-size: 14px;
   }
+  .number-box span {
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+  .line {
+    display: none;
+  }
 }
 @media (max-width: 350px) {
   .card {

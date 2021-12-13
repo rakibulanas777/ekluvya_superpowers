@@ -3,14 +3,15 @@ import logo from "../../../image/logo.svg";
 import gift from "../../../image/gift.svg";
 import whatsapp from "../../../image/whatsapp.svg";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar1 = () => {
   const [value, showValue] = useState(false);
   return (
     <nav class="navbar navbar-expand-lg  sticky-top navbar-dark ">
       <div class="container-fluid">
-        <div className="logo">
+        <Link to="/home">
           <img src={logo} className="logo-img" alt="" />
-        </div>
+        </Link>
         <button
           class="navbar-toggler nav-button"
           type="button"
