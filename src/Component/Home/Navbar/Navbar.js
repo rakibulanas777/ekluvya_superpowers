@@ -6,8 +6,23 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [value, showValue] = useState(false);
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 110) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
   return (
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark ">
+    <nav
+      className={
+        color
+          ? "navbar navbar-expand-lg sticky-top scroll "
+          : "navbar navbar-expand-lg sticky-top withoutScroll"
+      }
+    >
       <div class="container-fluid">
         <div className="logo">
           <Link to="/home">

@@ -8,13 +8,13 @@ const EventTimer = ({ dateevent }) => {
   const [timerSeconds, setTimerSeconds] = useState();
 
   let interval;
-  const countDownDate = new Date(dateevent).getTime();
+  const countDownDate = new Date("Dec 28,2021").getTime();
   const startTimer = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();
 
-      const distance = countDownDate - now;
-
+      const number = countDownDate - now;
+      const distance = Number(number);
       const hours = Math.floor(
         (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
       );
