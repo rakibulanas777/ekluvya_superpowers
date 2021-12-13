@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 const Clock = ({ timerHours, timerMinutes, timerSeconds }) => {
   return (
-    <div className="clock">
+    <div className="clock" style={{ fontSize: ".8rem" }}>
       <span className="expire-offer">{timerHours} : </span>
       <span className="expire-offer">{timerMinutes} : </span>
       <span className="expire-offer">{timerSeconds}</span>

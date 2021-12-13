@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [value, showValue] = useState(false);
   return (
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark ">
       <div class="container-fluid">
         <div className="logo">
           <Link to="/">
@@ -15,7 +15,7 @@ const Navbar = () => {
           </Link>
         </div>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler nav-button"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"

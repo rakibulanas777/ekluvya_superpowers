@@ -1,5 +1,5 @@
 /* Remove border from toggler */
-/* .navbar-toggler {
+.navbar-toggler {
   border: 0 !important;
 }
 
@@ -9,18 +9,11 @@
   outline: none !important;
   box-shadow: none !important;
   border: 0 !important;
-} */
+}
 .navbar-toggler-icon {
   color: white;
 }
 /* Lines of the Toggler */
-/* .toggler-icon {
-  width: 30px;
-  height: 3px;
-  background-color: #ffffff;
-  display: block;
-  transition: all 0.2s;
-} */
 
 /* Adds Space between the lines */
 /* .middle-bar {
@@ -63,16 +56,19 @@
 /* .navbar-toggler.collapsed .toggler-icon {
   background-color: #777777;
 } */
-
+.nav-button {
+  color: #ffffff;
+}
 nav {
   background-color: #131212 !important;
   opacity: 0.96;
   backdrop-filter: blur(28px);
 }
 .logo-img {
-  width: 300px;
+  width: 330px;
   cursor: pointer;
-  height: 90px;
+  height: 105px;
+  margin-left: 5%;
 }
 .gift-img-gift {
   background: transparent linear-gradient(112deg, #ec1279 0%, #ff7000 100%) 0%
@@ -120,5 +116,6 @@ nav {
 @media (max-width: 480px) {
   .logo-img {
     width: 100%;
+    margin-left: 0;
   }
 }
