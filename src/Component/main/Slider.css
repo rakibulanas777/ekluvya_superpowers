@@ -35,26 +35,21 @@
 }
 
 .img-carosoul {
-  position: relative;
+  position: absolute;
+  top: 0;
   margin-bottom: 40%;
 }
 
-/* .img-carosoul-hover {
-  background-size: cover;
-  opacity: 1;
-  background-color: #010001;
-  z-index: 2230;
+.img-carosoul-hover {
   position: relative;
-  transition: 0.2s ease-out;
-  background-blend-mode: darken;
-} */
+}
 .text-hover {
   position: absolute;
   color: #ffffff;
   font-size: 17px;
   font-size: 600;
   left: 15%;
-  top: 100%;
+  top: 50%;
 }
 .hover:hover {
   opacity: 0.3;

@@ -109,8 +109,10 @@ const Sliders = ({ Slidercard }) => {
         </div>
       </div>
       <div className="img-carosoul">
-        <img src={img3} className="hover w-75" alt="" />
-        <div className="text-hover w-75 text-white">{hover}</div>
+        <div className="img-carosoul-hover">
+          <img src={img3} className="hover w-75" alt="" />
+          <div className="text-hover w-75 text-white">{hover}</div>
+        </div>
       </div>
     </div>
   );
