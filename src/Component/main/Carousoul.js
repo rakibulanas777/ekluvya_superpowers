@@ -109,29 +109,16 @@ const Sliders = ({ Slidercard }) => {
     <div className="img_parent">
       <span className="img_parent_hover">
         <Link to={`/page/${id}`} className="link">
-          
-          <img
-            src={img3}
-            alt=""
-            width="100%"
-            className="image1 img-fluid"
-            // className="img-fluid  carsol-img-hover"
-          />
+          <img src={img3} alt="" width="100%" className="image1 img-fluid" />
           <div>
-         <div className="carousel-text">
-           {" "}
-           <Link to={`/page/${id}`} className="link">
-             {fname} <br /> {lname}
-           </Link>
-         </div>
-          <img
-            src={img}
-            alt=""
-
-            className="image2"
-
-            // className="img-fluid  carsol-img-hover"
-          />
+            <div className="carousel-text">
+              {" "}
+              <Link to={`/page/${id}`} className="link">
+                {fname} <br /> {lname}
+              </Link>
+            </div>
+            <img src={img} alt="" className="image2" />
+            <span className=" w-75 text-white">{hover}</span>
           </div>
         </Link>
       </span>
