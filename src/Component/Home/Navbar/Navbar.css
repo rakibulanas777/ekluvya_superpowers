@@ -67,8 +67,8 @@ nav {
 .logo-img {
   width: 350px;
   cursor: pointer;
-  height: 118px;
-  margin-left: 5%;
+  height: 110px;
+  margin-left: 5rem;
 }
 .gift-img-gift {
   background: transparent linear-gradient(112deg, #ec1279 0%, #ff7000 100%) 0%
