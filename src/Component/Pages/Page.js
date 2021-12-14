@@ -120,7 +120,7 @@ const Page = ({ match }) => {
                 ₹<span className="discount-number-box"> {discount}</span>
               </div>
               <div className="offer">
-                offer expires in <EventTimer dateevent={value.event} />
+                offer expires in <EventTimer dateevent={value} />
               </div>
             </div>
           </div>

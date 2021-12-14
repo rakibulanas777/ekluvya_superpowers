@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logo from "../../../image/logo.svg";
 import gift from "../../../image/gift.svg";
-import whatsapp from "../../../image/whatsapp.svg";
-import "./Navbar.css";
+import whatsapp from "../../../image/Component 38 – 1.png";
+import "./Navbar1.css";
 import { Link } from "react-router-dom";
 const Navbar1 = () => {
   const [number, setNumber] = useState("");
@@ -44,24 +44,25 @@ const Navbar1 = () => {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
-              <div className="whatsapp-img">
-                <a
-                  href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={whatsapp}
-                    className="img-fluid whatsapp "
-                    alt=""
-                    // onClick={() => {
-                    //   showValue(!value);
-                    //   setNumber();
-                    // }}
-                    srcset=""
-                  />
-                </a>
-                {/* {value && (
+              <a
+                className="whatsapp-img1"
+                href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={whatsapp}
+                  className="whatsapp1"
+                  alt=""
+                  // onClick={() => {
+                  //   showValue(!value);
+                  //   setNumber();
+                  // }}
+                  srcset=""
+                />
+                <div className="whatssapp-skill-content1">Happy to help</div>
+              </a>
+              {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
                     <input
                       type="text"
@@ -78,7 +79,6 @@ const Navbar1 = () => {
                     </div>
                   </div>
                 )} */}
-              </div>
             </div>
           </div>
         </div>
