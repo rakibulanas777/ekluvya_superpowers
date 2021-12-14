@@ -1,43 +1,20 @@
+.whatsapp-img1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 .whatsapp1 {
-  width: 232px;
-  height: 50px;
+  width: 180px;
+  margin-top: 10px;
   cursor: pointer;
 }
-.logo-img1 {
-  width: 300px;
+.whatssapp-skill-content1 {
+  position: absolute;
+  top: 37%;
+  left: 27%;
+  font: normal normal medium 20px/55px Baloo 2;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  opacity: 1;
   cursor: pointer;
-  height: 90px;
-}
-.whats-app-click1 {
-  background-color: #ffffff;
-  border-radius: 20px;
-  margin: 0 auto;
-  width: 9.7rem;
-}
-.whats-app-click1 input {
-  outline: none;
-  border: none;
-  background: transparent;
-  width: 70%;
-}
-@media (max-width: 560px) {
-  .logo-img1 {
-    width: 100%;
-  }
-}
-@media (max-width: 450px) {
-  .whatsapp1 {
-    width: 90%;
-  }
-}
-@media (max-width: 390px) {
-  .logo-img1 {
-    width: 60%;
-  }
-  .whatsapp1 {
-    width: 80%;
-  }
-  .whats-app-click1 {
-    width: 7rem;
-  }
 }
