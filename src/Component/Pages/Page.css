@@ -67,12 +67,13 @@
   border: none;
   text-align: center;
 }
-::-webkit-input-placeholder {
+
+/* ::-webkit-input-placeholder {
   margin: 0 auto;
   text-align: center;
   font-weight: 500;
   color: #a2a2a2;
-}
+} */
 .apply {
   color: white;
   background-color: transparent;
@@ -88,6 +89,7 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
 .text {
   color: white;
   font-weight: 600;
