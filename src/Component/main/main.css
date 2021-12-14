@@ -29,6 +29,9 @@
 }
 .mainbody {
   padding: 0px;
+  position: absolute;
+  bottom: -11.5rem;
+  right: -13rem;
 }
 .header-bottom {
   display: flex;
@@ -51,17 +54,22 @@
   text-transform: capitalize;
   font-size: 18px;
 }
-.main-video{
+.main-video {
   margin-left: 2rem;
 }
 
 @media (max-width: 990px) {
-  .main-video{
+  .main-video {
     margin-left: -1rem !important;
   }
   .header-bottom-width {
     width: 80%;
   }
+  .mainbody{
+    right:0rem;
+    bottom: -10rem;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -82,5 +90,3 @@
     font-size: 10px;
   }
 }
-
-
