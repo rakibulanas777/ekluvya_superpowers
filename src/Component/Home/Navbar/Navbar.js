@@ -44,11 +44,13 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
-              <a href="#gift">
+              <a href="#gift" className="gift-main">
                 <img src={gift} alt="" className="gift" srcset="" />
+                <div className="gift-skill-content">Gift a skill</div>
               </a>
-              <div className="whatsapp-img">
+
                 <a
+                  className="whatsapp-img"
                   href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
                   target="_blank"
                   rel="noreferrer"
@@ -81,7 +83,6 @@ const Navbar = () => {
                     </div>
                   </div>
                 )} */}
-              </div>
             </div>
           </div>
         </div>

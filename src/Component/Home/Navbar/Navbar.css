@@ -85,15 +85,31 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.gift-main {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 .gift {
-  width: 140px;
-  height: 71px;
+  width: 160px;
+  height: 80px;
   cursor: pointer;
+}
+.gift-skill-content {
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  /* transform: translate(-50%, -50%); */
+  font: normal normal medium 20px/55px Baloo 2;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  opacity: 1;
+
+
 }
 .whatsapp {
   width: 140px;
-  height: 71px;
+  height: 80px;
   cursor: pointer;
 }
 .whats-app-click {

@@ -1,4 +1,4 @@
-<svg id="Component_38_1" data-name="Component 38 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232" height="68" viewBox="0 0 232 68">
+<svg id="Component_38_1" data-name="Component 38 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232" height="80" viewBox="0 0 232 68">
   <defs>
     <clipPath id="clip-path">
       <rect id="Rectangle_102" data-name="Rectangle 102" width="232" height="68" transform="translate(1675 63)" fill="#fff" stroke="#707070" stroke-width="1"/>
@@ -37,7 +37,7 @@
         <g transform="matrix(1, 0, 0, 1, 1725, 112)" filter="url(#Path_70)">
           <path id="Path_70-3" data-name="Path 70" d="M20.5,0h153a20.5,20.5,0,0,1,0,41H20.5a20.5,20.5,0,0,1,0-41Z" transform="translate(15 12)" fill="#454545"/>
         </g>
-        <text id="Happy_to_help" data-name="Happy to help" transform="translate(1784 150)" fill="#fff" font-size="20" font-family="SegoeUI, Segoe UI" letter-spacing="0.05em"><tspan x="0" y="0">Happy to help</tspan></text>
+        <text id="Happy_to_help" data-name="Happy to help" transform="translate(1784 150)" fill="#fff" font-size="20" font-family="Baloo 2, SegoeUI, Segoe UI" letter-spacing="0.05em"><tspan x="0" y="0">Happy to help</tspan></text>
       </g>
       <g transform="matrix(1, 0, 0, 1, 1685, 65)" filter="url(#Image_18)">
         <rect id="Image_18-2" data-name="Image 18" width="48" height="48" transform="translate(6 9)" fill="url(#pattern)"/>
