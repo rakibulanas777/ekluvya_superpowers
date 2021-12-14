@@ -40,7 +40,7 @@ const Main = () => {
                 these super powers :
                 <div
                   className="icon-arrow d-lg-block d-none mt-5"
-                  style={{ marginLeft: "30%" }}
+                  style={{ marginLeft: "20%" }}
                 >
                   <img src={arrow} width="16px" alt="" />
                 </div>

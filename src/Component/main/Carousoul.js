@@ -94,7 +94,7 @@ const Carousoul = ({ onClick }) => {
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
         ))}
       </Slider>
-      <div className="arrow-icon-carrosoul text-center d-flex justify-content-around  mx-auto">
+      <div className="arrow-icon-carrosoul  d-flex justify-content-around  mx-auto">
         <i class="fas fa-chevron-left" onClick={onClick}></i>
         <i class="fas fa-chevron-right"></i>
       </div>

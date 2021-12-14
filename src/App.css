@@ -4,4 +4,5 @@ body {
   background-color: #010001;
   opacity: 1;
   font-family: "Baloo 2", cursive;
+  overflow-x: hidden;
 }

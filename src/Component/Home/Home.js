@@ -16,7 +16,7 @@ const Home = () => {
           <br />
           For a future that’s so unpredictable <br /> how do we school our kids
           ?
-          <div className="icon-arrow mt-5" style={{ marginLeft: "30%" }}>
+          <div className="icon-arrow mt-5" style={{ marginLeft: "20%" }}>
             <a href="#gift">
               <img src={arrow} width="16px" alt="" />
             </a>
