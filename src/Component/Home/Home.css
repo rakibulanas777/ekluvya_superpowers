@@ -1,6 +1,6 @@
 header {
   height: 100vh;
-  background-image: url("../../image//Cover.png");
+  background-image: url("../../image/background-image-home.jpeg");
   background-color: #191919;
   background-position: center;
   background-size: cover;
@@ -13,7 +13,7 @@ header {
 }
 .main-title {
   color: #e61277;
-  font-family: "Baloo 2", cursive;
+
   font-size: 30px;
   text-transform: capitalize;
   font-weight: 500;

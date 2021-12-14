@@ -20,11 +20,11 @@ const Navbar = () => {
     <nav
       className={
         color
-          ? "navbar navbar-expand-lg sticky-top scroll "
-          : "navbar navbar-expand-lg sticky-top withoutScroll"
+          ? "navbar navbar-expand-lg sticky-top scroll navbar-dark "
+          : "navbar navbar-expand-lg sticky-top withoutScroll navbar-dark"
       }
     >
-      <div class="container-fluid">
+      <div class="container">
         <div className="logo">
           <Link to="/home">
             <img src={logo} className="logo-img" alt="" />
@@ -45,37 +45,36 @@ const Navbar = () => {
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
               <a href="#gift">
-                <img
-                  src={gift}
-                  alt=""
-                  className="img-fluid  w-75 gift"
-                  srcset=""
-                />
+                <img src={gift} alt="" className="gift" srcset="" />
               </a>
               <div className="whatsapp-img">
                 <img
                   src={whatsapp}
-                  className="img-fluid whatsapp "
+                  className=" whatsapp "
                   alt=""
-                  onClick={() => {
-                    showValue(!value);
-                    setNumber();
-                  }}
+                  // onClick={() => {
+                  //   showValue(!value);
+                  //   setNumber();
+                  // }}
                   srcset=""
                 />
-                {value && (
+                {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
                     <input
                       type="text"
                       onChange={(e) => setNumber(e.target.value)}
                     />
                     <div className="whatsapp-arrow">
-                      <a href={`https://wa.me/${number}`} target="_blank" rel="noreferrer">
+                      <a
+                        href={`https://wa.me/${number}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <i class="fas fa-angle-right"></i>
                       </a>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>

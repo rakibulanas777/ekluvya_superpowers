@@ -25,6 +25,16 @@
   color: #ffffff;
   margin-right: 20%;
 }
+.input-field {
+  background: transparent;
+  width: 80%;
+  border: none;
+  outline: none;
+  color: white;
+}
+::-webkit-input-placeholder {
+  color: #ffffff;
+}
 .fa-angle-right {
   color: white;
   font-size: 25px;
