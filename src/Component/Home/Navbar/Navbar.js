@@ -55,7 +55,7 @@ const Navbar = () => {
               <div className="whatsapp-img">
                 <img
                   src={whatsapp}
-                  className="img-fluid whatsapp "
+                  className=" whatsapp "
                   alt=""
                   onClick={() => {
                     showValue(!value);

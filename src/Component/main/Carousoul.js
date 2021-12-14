@@ -43,17 +43,17 @@ const Carousoul = ({ onClick }) => {
     slidesToShow: 8,
     arrows: false,
     slidesToScroll: 8,
-    initialSlide: 4,
+    initialSlide: 8,
     // width:"300px",
     responsive: [
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 6,
+          slidesToScroll: 6,
           infinite: true,
           dots: true,
-          initialSlide: 4,
+          initialSlide: 6,
         },
       },
       {
@@ -71,7 +71,7 @@ const Carousoul = ({ onClick }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 3,
+          initialSlide: 2,
           infinite: true,
         },
       },
