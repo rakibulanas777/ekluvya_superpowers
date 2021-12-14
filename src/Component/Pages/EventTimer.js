@@ -8,7 +8,8 @@ const EventTimer = ({ dateevent }) => {
   const [timerSeconds, setTimerSeconds] = useState();
 
   let interval;
-  const countDownDate = new Date("Dec 28,2021").getTime();
+  // make a dynamic date
+  const countDownDate = new Date(dateevent).getTime();
   const startTimer = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();

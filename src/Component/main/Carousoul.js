@@ -6,7 +6,7 @@ import "./Slider.css";
 import { Link } from "react-router-dom";
 import img3 from "../../image/Gift_hover.svg";
 import topGift from "../../image/top_gift.svg";
-
+import { courses } from "../../api_call";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -30,11 +30,16 @@ function SamplePrevArrow(props) {
 
 const Carousoul = ({ onClick }) => {
   const [value, getValue] = useState([]);
+  
+
   useEffect(() => {
-    fetch("../../../data.json")
-      .then((res) => res.json())
-      .then((data) => getValue(data));
+    async function getCourses(){
+      const courseData = await courses()
+      getValue(courseData)
+    }
+    getCourses();
   }, []);
+  console.log({ value });
 
   var settings = {
     dots: true,
@@ -105,20 +110,19 @@ const Carousoul = ({ onClick }) => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard }) => {
-  const { id, fname, lname, img, hover } = Slidercard;
+  const { _id, courseName, thumbnailUrl:img, hover } = Slidercard;
   return (
     <div className="img_parent">
       <span className="img_parent_hover">
-        <Link to={`/page/${id}`} className="link">
+        <Link to={`/page/${_id}`} className="link">
           <div className="image1">
             <img src={img3} alt="" width="100%" className=" img-fluid" />
             <p className="w-60 text-white">{hover}</p>
           </div>
           <div>
             <div className="carousel-text">
-              {" "}
-              <Link to={`/page/${id}`} className="link">
-                {fname} <br /> {lname}
+              <Link to={`/page/${_id}`} className="link">
+                {courseName}
               </Link>
             </div>
             <img src={img} alt="" className="image2" />
@@ -126,42 +130,5 @@ const Sliders = ({ Slidercard }) => {
         </Link>
       </span>
     </div>
-    // <div className="carsol-img w-75">
-    //   <div className="main-img-hover">
-    // <img
-    //   src={img3}
-    //   alt=""
-    //   width="200px"
-    //   height="176px"
-    //   className="img-fluid  carsol-img-hover"
-    // />
-
-    //     <div className="carousel-text">
-    //       {" "}
-    //       <Link to={`/page/${id}`} className="link">
-    //         {fname} <br /> {lname}
-    //       </Link>
-    //     </div>
-    //     <img
-    //       src={img}
-    //       className="img-carosoul hover"
-    //       width="100%"
-    //       height="200px"
-    //       alt=""
-    //     />
-    //   </div>
-    //   {/* <div className="img-carosoul">
-    //     <div className="img-carosoul-hover"> */}
-    //   {/* <img
-    //         src={img3}
-    //         className="hover"
-    //         width="250px"
-    //         height="250px"
-    //         alt=""
-    //       /> */}
-    //   {/* <div className="text-hover w-75 text-white">{hover}</div> */}
-    //   {/* </div>
-    //   </div> */}
-    // </div>
   );
 };

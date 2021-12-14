@@ -9,6 +9,7 @@ import LoginModal from "../Modal/LoginModal";
 import VideoModal from "../Modal/VideoModal";
 import { useParams } from "react-router";
 import EventTimer from "./EventTimer";
+import { courseDetail } from "../../api_call";
 const Page = ({ match }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -21,23 +22,28 @@ const Page = ({ match }) => {
   const { id } = useParams();
   console.log(id);
 
-  const [value, getValue] = useState([]);
+  const [value, getValue] = useState({});
   useEffect(() => {
-    fetch("../../../data.json")
-      .then((res) => res.json())
-      .then((data) => getValue(data[id - 1]));
-  }, []);
-
+    async function getCourses() {
+      const courseData = await courseDetail(id);
+      getValue(courseData);
+    }
+    getCourses();
+  }, [id]);
+  console.log({ value });
   const {
-    title,
-    cname,
-    future,
-    join,
-    image,
-    description,
-    amount,
+    courseName: title,
+    cname = "ASHNI Future",
+    future = "Entrepreneur",
+    join = 0,
+    thumbnailUrl: image,
+    description = "Testimonial",
+    amount = 100,
     discount,
-    descriptionpart,
+    descriptionpart = "No Description",
+    video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",
+    expiryDate = "Dec 28,2021",
+    description_two = "Future greatness @ the cost of a family dinner",
   } = value;
 
   return (
@@ -83,7 +89,8 @@ const Page = ({ match }) => {
               {descriptionpart}
             </div>
             <div className="page-last-text">
-              <b>Future greatness @ the cost of a family dinner</b>
+              {/* Make a dynamic */}
+              <b>{description_two}</b>
             </div>
           </div>
           {/* <div className="page-promo-code mb-5">
@@ -110,19 +117,21 @@ const Page = ({ match }) => {
               </div>
               <div className="number">
                 <span className="number-box">
-                  <img src={line} className="line" alt="" />{" "}
+                  {discount && <img src={line} className="line" alt="" />}
                   <span>₹ {amount}</span>
                 </span>
               </div>
             </div>
-            <div className="discount-money mt-lg-0 mb-lg-0 mx-auto mx-lg-0">
-              <div className="discount">
-                ₹<span className="discount-number-box"> {discount}</span>
+            {discount && (
+              <div className="discount-money mt-lg-0 mb-lg-0 mx-auto mx-lg-0">
+                <div className="discount">
+                  ₹<span className="discount-number-box"> {discount}</span>
+                </div>
+                <div className="offer">
+                  offer expires in <EventTimer dateevent={expiryDate} />
+                </div>
               </div>
-              <div className="offer">
-                offer expires in <EventTimer dateevent={value} />
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
@@ -132,7 +141,7 @@ const Page = ({ match }) => {
         openbtn2={handleOpen2}
         closebtn2={handleClose2}
         open2={open2}
-        videofile={value}
+        videofile={video}
       />
     </div>
   );
