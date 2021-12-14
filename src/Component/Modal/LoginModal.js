@@ -11,8 +11,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "80%",
-  height: "96%",
+  width: "90%",
+  height: "90%",
   bgcolor: "#242424",
 
   boxShadow: 24,
@@ -49,6 +49,9 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="mb-5">
+          <div className="cross-icon" onClick={closebtn}>
+            <i class="fas fa-times"></i>
+          </div>
           <div className="btn-modal d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-center">
             {/* <div className="guest-btn-modal">
               <button
@@ -65,7 +68,7 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
               </div>
               <form onSubmit={handleClick}>
                 <div
-                  className="show-extra d-flex  flex-column align-items-lg-center align-items-center"
+                  className="show-extra d-flex flex-lg-row flex-column align-items-lg-center align-items-center"
                   style={{ gap: "5px" }}
                 >
                   <div className="btn-yourname ">
@@ -116,7 +119,7 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
                 </div>
 
                 <div
-                  className=" d-flex  flex-column align-items-lg-center align-items-center"
+                  className=" d-flex flex-lg-row flex-column align-items-lg-center align-items-center"
                   style={{ gap: "5px", marginTop: "50px" }}
                 >
                   <div className="btn-yourname ">

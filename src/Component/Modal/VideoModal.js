@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./video.css";
 
-const VideoModal = ({ openbtn2, closebtn2, open2 }) => {
+const VideoModal = ({ openbtn2, closebtn2, open2, videofile }) => {
   return (
     <div>
       <Modal
@@ -16,10 +16,7 @@ const VideoModal = ({ openbtn2, closebtn2, open2 }) => {
       >
         <Box className="video-box">
           <video width="100%" className="video" height="auto" controls>
-            <source
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              type="video/mp4"
-            />
+            <source src={videofile} type="video/mp4" />
           </video>
           <div className="cross-icon" onClick={closebtn2}>
             <i class="fas fa-times"></i>

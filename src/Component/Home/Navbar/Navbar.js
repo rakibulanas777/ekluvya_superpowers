@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../../image/logo.svg";
 import gift from "../../../image/gift.svg";
-import whatsapp from "../../../image/whatsapp.svg";
+import whatsapp from "../../../image/Component 38 – 1.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = () => {
@@ -49,24 +49,25 @@ const Navbar = () => {
                 <div className="gift-skill-content">Gift a skill</div>
               </a>
 
-                <a
-                  className="whatsapp-img"
-                  href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={whatsapp}
-                    className=" whatsapp "
-                    alt=""
-                    // onClick={() => {
-                    //   showValue(!value);
-                    //   setNumber();
-                    // }}
-                    srcset=""
-                  />
-                </a>
-                {/* {value && (
+              <a
+                className="whatsapp-img"
+                href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={whatsapp}
+                  className="whatsapp"
+                  alt=""
+                  // onClick={() => {
+                  //   showValue(!value);
+                  //   setNumber();
+                  // }}
+                  srcset=""
+                />
+                <div className="whatssapp-skill-content">Happy to help</div>
+              </a>
+              {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
                     <input
                       type="text"

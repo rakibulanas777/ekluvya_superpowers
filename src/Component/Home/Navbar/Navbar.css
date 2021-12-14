@@ -62,7 +62,7 @@
 
 .withoutScroll {
   background-color: #010001;
-  opacity: 1;
+  opacity: 0.8;
 }
 .scroll {
   background-color: #0c0c0c !important;
@@ -102,14 +102,27 @@
   /* transform: translate(-50%, -50%); */
   font: normal normal medium 20px/55px Baloo 2;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
-
-
+}
+.whatsapp-img {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 .whatsapp {
-  width: 140px;
-  height: 80px;
+  width: 180px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.whatssapp-skill-content {
+  position: absolute;
+  top: 37%;
+  left: 27%;
+  font: normal normal medium 20px/55px Baloo 2;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  opacity: 1;
   cursor: pointer;
 }
 .whats-app-click {

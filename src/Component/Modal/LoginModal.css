@@ -48,3 +48,23 @@
   color: tomato;
 }
 /*  */
+@media (max-width: 1350px) {
+  .btn-yourname {
+    width: 14rem;
+  }
+}
+@media (max-width: 1267px) {
+  .btn-yourname {
+    width: 13rem;
+  }
+}
+@media (max-width: 1230px) {
+  .btn-yourname {
+    width: 11rem;
+  }
+}
+@media (max-width: 991px) {
+  .btn-yourname {
+    width: 15rem;
+  }
+}

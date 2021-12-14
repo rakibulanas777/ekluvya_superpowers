@@ -28,8 +28,17 @@ const Page = ({ match }) => {
       .then((data) => getValue(data[id - 1]));
   }, []);
 
-  const { title, cname, future, join, image, description, amount, discount } =
-    value;
+  const {
+    title,
+    cname,
+    future,
+    join,
+    image,
+    description,
+    amount,
+    discount,
+    descriptionpart,
+  } = value;
 
   return (
     <div className="container mb-5">
@@ -70,13 +79,8 @@ const Page = ({ match }) => {
                 {/* <span className="tailor">Watch tailor</span> */}
               </div>
             </div>
-            <div className="page-text-description mb-3">
-              Good grades are dependent on how much your kids remember in an
-              exam.
-              <br />
-              This 30-day course massively improves their memory.
-              <br />
-              Gift them a super power that they’ll never forget.
+            <div className="page-text-description w-50 mb-3 text-left">
+              {descriptionpart}
             </div>
             <div className="page-last-text">
               <b>Future greatness @ the cost of a family dinner</b>
@@ -90,7 +94,7 @@ const Page = ({ match }) => {
             />
             <input type="submit" className="apply" value="Apply" />
           </div> */}
-          <div className="discount-gift-section flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
+          <div className="discount-gift-section  flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
                 Gift now
@@ -128,6 +132,7 @@ const Page = ({ match }) => {
         openbtn2={handleOpen2}
         closebtn2={handleClose2}
         open2={open2}
+        videofile={value}
       />
     </div>
   );
