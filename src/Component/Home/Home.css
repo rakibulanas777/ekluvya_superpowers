@@ -10,6 +10,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-left: 1.5rem;
 }
 .main-title {
   color: #e61277;
@@ -44,6 +45,7 @@ header {
   }
   .main {
     width: 70%;
+    margin-left: -2rem;
   }
   .main-description {
     width: 60%;

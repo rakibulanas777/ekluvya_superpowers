@@ -61,7 +61,7 @@ const Page = ({ match }) => {
             <div className="page-title d-flex mb-4 flex-lg-row flex-column align-items-lg-center align-items-start">
               <div className="page-title-text me-5">{title}</div>
               <div className="wrapper mt-lg-0 mt-5">
-                <div class="button">
+                <div class="button" onClick={handleOpen2}>
                   <div class="icon">
                     <i class="fas fa-play"></i>
                   </div>

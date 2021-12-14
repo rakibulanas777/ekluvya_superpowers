@@ -24,10 +24,12 @@ const Navbar1 = () => {
           : "navbar navbar-expand-lg sticky-top withoutScroll navbar-dark"
       }
     >
-      <div class="container-fluid">
+      <div class="container">
+        <div className="logo">
         <Link to="/home">
           <img src={logo} className="logo-img" alt="" />
         </Link>
+        </div>
         <button
           class="navbar-toggler nav-button"
           type="button"
@@ -43,17 +45,23 @@ const Navbar1 = () => {
           <div class="navbar-nav ms-auto">
             <div className="left-navbar d-flex align-items-center">
               <div className="whatsapp-img">
+                <a
+                  href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                 <img
                   src={whatsapp}
                   className="img-fluid whatsapp "
                   alt=""
-                  onClick={() => {
-                    showValue(!value);
-                    setNumber();
-                  }}
+                  // onClick={() => {
+                  //   showValue(!value);
+                  //   setNumber();
+                  // }}
                   srcset=""
                 />
-                {value && (
+                </a>
+                {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
                     <input
                       type="text"
@@ -69,7 +77,7 @@ const Navbar1 = () => {
                       </a>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>

@@ -48,16 +48,22 @@ const Navbar = () => {
                 <img src={gift} alt="" className="gift" srcset="" />
               </a>
               <div className="whatsapp-img">
-                <img
-                  src={whatsapp}
-                  className=" whatsapp "
-                  alt=""
-                  // onClick={() => {
-                  //   showValue(!value);
-                  //   setNumber();
-                  // }}
-                  srcset=""
-                />
+                <a
+                  href={`https://api.whatsapp.com/send?phone=919885018443&text=Hi,+tell+me+more+about+school+of+superpowers.`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={whatsapp}
+                    className=" whatsapp "
+                    alt=""
+                    // onClick={() => {
+                    //   showValue(!value);
+                    //   setNumber();
+                    // }}
+                    srcset=""
+                  />
+                </a>
                 {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
                     <input

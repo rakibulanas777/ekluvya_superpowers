@@ -51,8 +51,14 @@
   text-transform: capitalize;
   font-size: 18px;
 }
+.main-video{
+  margin-left: 2rem;
+}
 
 @media (max-width: 990px) {
+  .main-video{
+    margin-left: -1rem !important;
+  }
   .header-bottom-width {
     width: 80%;
   }
@@ -76,4 +82,5 @@
     font-size: 10px;
   }
 }
+
 
