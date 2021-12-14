@@ -12,7 +12,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "80%",
-  height: "92%",
+  height: "96%",
   bgcolor: "#242424",
 
   boxShadow: 24,
@@ -26,6 +26,20 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
+
+  ///get value
+  const [registerData, setRegisterData] = useState({});
+  const handleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newRegisterData = { ...registerData };
+    newRegisterData[field] = value;
+    setRegisterData(newRegisterData);
+  };
+  console.log(registerData);
   return (
     <div className="container">
       <Modal
@@ -49,49 +63,83 @@ const LoginModal = ({ openbtn, closebtn, open }) => {
                 {/* this is for display info */}
                 <button className="openPayment mb-5">User Info</button>
               </div>
-
-              <div
-                className="show-extra"
-                style={{ display: "flex", gap: "5px" }}
-              >
-                <div className="btn-yourname ">
-                  {/* this is input */}
-                  <button className="yourname">Your name</button>
-                  <i class="fas fa-angle-right"></i>
-                </div>
-                {/* this is input */}
-
-                <div className="btn-yourname ">
-                  <button className="yourname">Mobile</button>
-                  <i class="fas fa-angle-right"></i>
-                </div>
-                {/* this is input */}
-
-                <div className="btn-yourname ">
-                  <button className="yourname">Email</button>
-                  <i class="fas fa-angle-right"></i>
-                </div>
-
-                {/* This is the button  */}
-                <div className="btn-yourname ">
-                  <button className="yourname">Send Otp</button>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", gap: "5px", marginTop: "50px" }}>
-                <div className="btn-yourname ">
-                  {/* this is input */}
-                  <button className="yourname">Enter otp</button>
-                  <i class="fas fa-angle-right"></i>
-                </div>
-                {/* This is the button */}
+              <form onSubmit={handleClick}>
                 <div
-                  className="btn-yourname "
-                  onClick={() => displayRazorpay({})}
+                  className="show-extra d-flex  flex-column align-items-lg-center align-items-center"
+                  style={{ gap: "5px" }}
                 >
-                  <button className="yourname">Verify</button>
+                  <div className="btn-yourname ">
+                    {/* this is input */}
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Your name"
+                      name="YourName"
+                      required
+                      onBlur={handleOnChange}
+                    />
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  {/* this is input */}
+
+                  <div className="btn-yourname ">
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Phone Number"
+                      name="mobile"
+                      required
+                      onBlur={handleOnChange}
+                    />
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  {/* this is input */}
+
+                  <div className="btn-yourname ">
+                    <input
+                      type="email   "
+                      className="input-field"
+                      placeholder="Email adress"
+                      name="email"
+                      required
+                      onBlur={handleOnChange}
+                    />
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+
+                  {/* This is the button  */}
+                  <div className="btn-yourname ">
+                    <button className="yourname" type="submit">
+                      Send Otp
+                    </button>
+                  </div>
                 </div>
-              </div>
+
+                <div
+                  className=" d-flex  flex-column align-items-lg-center align-items-center"
+                  style={{ gap: "5px", marginTop: "50px" }}
+                >
+                  <div className="btn-yourname ">
+                    {/* this is input */}
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Enter otp"
+                      name="otp"
+                      required
+                      onBlur={handleOnChange}
+                    />
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  {/* This is the button */}
+                  <div
+                    className="btn-yourname "
+                    onClick={() => displayRazorpay({})}
+                  >
+                    <button className="yourname">Verify</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </Box>

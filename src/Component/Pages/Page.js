@@ -58,18 +58,12 @@ const Page = ({ match }) => {
         </div>
         <div className="col-lg-8  col-10 mx-auto">
           <div className="page-text-details mb-4">
-            <div className="page-title d-flex mb-3 align-items-center">
+            <div className="page-title d-flex mb-4 flex-lg-row flex-column align-items-lg-center align-items-start">
               <div className="page-title-text me-5">{title}</div>
-              <div className="wrapper">
+              <div className="wrapper mt-lg-0 mt-5">
                 <div class="button">
                   <div class="icon">
-                    <img
-                      src={play}
-                      onClick={handleOpen2}
-                      className="play-icon"
-                      alt=""
-                      srcset=""
-                    />
+                    <i class="fas fa-play"></i>
                   </div>
                   <span>Watch tailor</span>
                 </div>
@@ -88,16 +82,16 @@ const Page = ({ match }) => {
               <b>Future greatness @ the cost of a family dinner</b>
             </div>
           </div>
-          <div className="page-promo-code mb-5">
+          {/* <div className="page-promo-code mb-5">
             <input
               type="text"
               placeholder="Promo Code"
               className="input me-3"
             />
             <input type="submit" className="apply" value="Apply" />
-          </div>
+          </div> */}
           <div className="discount-gift-section flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
-            <div className="discount-gift-box d-flex me-4 align-items-center justify-content-center ">
+            <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
                 Gift now
               </button>
@@ -117,7 +111,7 @@ const Page = ({ match }) => {
                 </span>
               </div>
             </div>
-            <div className="discount-money mt-lg-0 mb-lg-0 mb-5 mt-5">
+            <div className="discount-money mt-lg-0 mb-lg-0 mx-auto mx-lg-0">
               <div className="discount">
                 ₹<span className="discount-number-box"> {discount}</span>
               </div>

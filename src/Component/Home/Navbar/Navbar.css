@@ -61,20 +61,18 @@
 }
 
 .withoutScroll {
-  background-color: #010001 !important;
+  background-color: #010001;
   opacity: 1;
 }
 .scroll {
-  background-color: #131212 !important;
-  opacity: 0.96;
+  background-color: #0c0c0c !important;
+  opacity: 0.99;
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(28px);
 }
 .logo-img {
-  width: 350px;
   cursor: pointer;
   height: 110px;
-  margin-left: 5rem;
 }
 .gift-img-gift {
   background: transparent linear-gradient(112deg, #ec1279 0%, #ff7000 100%) 0%
@@ -89,13 +87,13 @@
 }
 
 .gift {
-  width: 186px;
+  width: 140px;
   height: 71px;
   cursor: pointer;
 }
 .whatsapp {
-  width: 232px;
-  height: 50px;
+  width: 140px;
+  height: 71px;
   cursor: pointer;
 }
 .whats-app-click {
@@ -119,9 +117,21 @@
   font-size: 20px;
   font-weight: 500;
 }
+@media (max-width: 1221px) {
+  .logo-img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 @media (max-width: 480px) {
   .logo-img {
     width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 310px) {
+  .logo-img {
+    width: 70%;
     margin-left: 0;
   }
 }
