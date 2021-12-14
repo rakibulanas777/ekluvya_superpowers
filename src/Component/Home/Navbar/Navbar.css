@@ -62,11 +62,11 @@
 
 .withoutScroll {
   background-color: #010001;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .scroll {
   background-color: #0c0c0c !important;
-  opacity: 0.99;
+  opacity: 0.96;
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(28px);
 }
