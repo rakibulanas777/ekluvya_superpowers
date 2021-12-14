@@ -15,8 +15,8 @@ const VideoModal = ({ openbtn2, closebtn2, open2, videofile }) => {
         aria-describedby="modal-modal-description"
       >
         <Box className="video-box">
-          <video width="100%" className="video" height="auto" controls>
-            <source src={videofile} type="video/mp4" />
+          <video width="100%" className="video" height="auto" autoPlay controls>
+            <source src={videofile.video} type="video/mp4" />
           </video>
           <div className="cross-icon" onClick={closebtn2}>
             <i class="fas fa-times"></i>

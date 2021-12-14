@@ -26,9 +26,9 @@ const Navbar1 = () => {
     >
       <div class="container">
         <div className="logo">
-        <Link to="/home">
-          <img src={logo} className="logo-img" alt="" />
-        </Link>
+          <Link to="/home">
+            <img src={logo} className="logo-img" alt="" />
+          </Link>
         </div>
         <button
           class="navbar-toggler nav-button"
@@ -50,16 +50,16 @@ const Navbar1 = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                <img
-                  src={whatsapp}
-                  className="img-fluid whatsapp "
-                  alt=""
-                  // onClick={() => {
-                  //   showValue(!value);
-                  //   setNumber();
-                  // }}
-                  srcset=""
-                />
+                  <img
+                    src={whatsapp}
+                    className="img-fluid whatsapp "
+                    alt=""
+                    // onClick={() => {
+                    //   showValue(!value);
+                    //   setNumber();
+                    // }}
+                    srcset=""
+                  />
                 </a>
                 {/* {value && (
                   <div className="whats-app-click d-flex justify-content-evenly align-items-center">
