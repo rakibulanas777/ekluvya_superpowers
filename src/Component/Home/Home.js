@@ -27,7 +27,7 @@ const Home = () => {
         <div className="header-bottom ">
           <div className="header-bottom-width">
             <div className="header-bottom-text">
-              gift your kids skills <br /> that aren’t taught at schools
+              Gift your kids skills <br /> that aren’t taught at schools
             </div>
           </div>
           <div className="header-bottom-img">

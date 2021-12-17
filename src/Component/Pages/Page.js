@@ -74,7 +74,7 @@ const Page = ({ match }) => {
                   <div class="icon">
                     <i class="fas fa-play"></i>
                   </div>
-                  <span>Watch tailor</span>
+                  <span>Watch trailer</span>
                 </div>
                 {/* <span className="tailor">Watch tailor</span> */}
               </div>
