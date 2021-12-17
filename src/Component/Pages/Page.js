@@ -10,19 +10,43 @@ import VideoModal from "../Modal/VideoModal";
 import { useParams } from "react-router";
 import EventTimer from "./EventTimer";
 import { courseDetail } from "../../api_call";
+import { displayRazorpay } from "../Modal/razorpay";
 const Page = ({ match }) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const { id } = useParams();
+
+  const [value, getValue] = useState({});
+  const handleOpen = () => {
+    let getToken = localStorage.getItem("access-token");
+    if (getToken) {
+      getToken = JSON.parse(getToken);
+      const token=getToken.token
+      const user_id = getToken.id;
+      if (!user_id) {
+        setOpen(true);
+      } else {
+        const phoneNumber = getToken.phoneNumber;
+        const email = getToken.email;
+  
+        displayRazorpay({
+          user_id,
+          phone_number: phoneNumber,
+          email,
+          course_id: id,
+          course_amount: value?.discount || value?.amount || 100,
+          accessToken: token,
+        });
+      }
+    } else {
+      setOpen(true);
+    }
+  };
   const handleClose = () => setOpen(false);
 
   const [open2, setOpen2] = React.useState(false);
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
 
-  const { id } = useParams();
-  console.log(id);
-
-  const [value, getValue] = useState({});
   useEffect(() => {
     async function getCourses() {
       const courseData = await courseDetail(id);
@@ -30,7 +54,6 @@ const Page = ({ match }) => {
     }
     getCourses();
   }, [id]);
-  console.log({ value });
   const {
     courseName: title,
     cname = "ASHNI Future",
@@ -38,7 +61,7 @@ const Page = ({ match }) => {
     join = 0,
     thumbnailUrl: image,
     description = "Testimonial",
-    amount = 100,
+    amount = 100, // not getting from api 
     discount,
     descriptionpart = "No Description",
     video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",
@@ -80,7 +103,7 @@ const Page = ({ match }) => {
                   <div class="icon">
                     <i class="fas fa-play"></i>
                   </div>
-                  <span>Watch tailor</span>
+                  <span>Watch trailer</span>
                 </div>
                 {/* <span className="tailor">Watch tailor</span> */}
               </div>
@@ -136,13 +159,19 @@ const Page = ({ match }) => {
         </div>
       </div>
 
-      <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />
+      <LoginModal
+        openbtn={handleOpen}
+        closebtn={handleClose}
+        open={open}
+        courseDetails={value}
+      />
       <VideoModal
         openbtn2={handleOpen2}
         closebtn2={handleClose2}
         open2={open2}
         videofile={video}
       />
+      <div id="recaptcha-container"></div>
     </div>
   );
 };

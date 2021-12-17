@@ -52,10 +52,16 @@
 .btn .active {
   border: none;
 }
+.get-otp {
+  margin: auto;
+}
 /*  */
 @media (max-width: 1350px) {
   .btn-yourname {
     width: 14rem;
+  }
+  .get-otp {
+    margin: 0;
   }
 }
 @media (max-width: 1267px) {

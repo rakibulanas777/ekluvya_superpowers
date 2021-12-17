@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Clock from "./Clock";
 
-const EventTimer = ({ dateevent }) => {
+const EventTimer = ({ dateevent = "Dec 28,2021" }) => {
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();

@@ -39,7 +39,6 @@ const Carousoul = ({ onClick }) => {
     }
     getCourses();
   }, []);
-  console.log({ value });
 
   var settings = {
     dots: true,
