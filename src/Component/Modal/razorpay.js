@@ -25,14 +25,16 @@ function loadScript(src) {
 
 export async function displayRazorpay({
   course_name = "Course",
-  course_id = "123",
+  course_id,
+  subject_id,
   user_id = "1",
   name = "",
   email = "",
   phone_number = "",
-  course_amount = 0,
+  course_amount = 1,
   accessToken = token,
 }) {
+  console.log({course_id,subject_id})
   const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
   if (!res) {
@@ -42,7 +44,7 @@ export async function displayRazorpay({
 
   // creating a new order
   const result = await axios.post(`${url}${orderIdGenerate}`, {
-    amount: 1 * 100,
+    amount: course_amount * 100,
   });
   // course_amount;
 
@@ -93,6 +95,7 @@ export async function displayRazorpay({
       boardId: board_id, // make a dynamic
       classId: class_id, // make a dynamic
       courseId: course_id, // make a dynamic
+      subjectId: subject_id, // make a dynamic
     },
     theme: {
       color: "#FF7000",

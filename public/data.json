@@ -1,5 +1,7 @@
 [
   {
+    "_id": "61ba086e4093eaba5416b129",
+    "course_id": "61948b6d259f68f4edacefba",
     "fname": "Mega",
     "lname": "Memory",
     "title": "Mega Memory",
@@ -18,6 +20,8 @@
     "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_MEM_TRAILER.mp4"
   },
   {
+    "_id": "61ba08c04093eaba5416b177",
+    "course_id": "61948b6d259f68f4edacefba",
     "fname": "Happiness",
     "lname": "Factory",
     "title": "Happiness factory",
@@ -36,6 +40,8 @@
     "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_HF_TRAILER.mp4"
   },
   {
+    "_id": "61ba08a04093eaba5416b16b",
+    "course_id": "61948b6d259f68f4edacefba",
     "fname": "Winning",
     "lname": "Habits",
     "title": "Winning Habits",
@@ -54,6 +60,8 @@
     "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4"
   },
   {
+    "_id": "61ba08794093eaba5416b140",
+    "course_id": "61948b6d259f68f4edacefba",
     "fname": "Shy No",
     "lname": "More",
     "title": "Shy No More",
@@ -72,24 +80,8 @@
     "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_SNM_TRAILER.mp4"
   },
   {
-    "fname": "Quick",
-    "lname": "Learning",
-    "title": "Quick Learning",
-    "cname": "LUVYA Future",
-    "future": "Film Maker",
-    "join": "Luvya + 3015",
-    "id": 5,
-    "img": "https://i.ibb.co/r7YP0Pt/Quick-learning-1.png",
-    "image": "https://i.ibb.co/mSXbPjX/Artboard-10.png",
-    "description": "I can learn anything. But you have to give me 30 days",
-    "descriptionpart": "Learning is easy. when you know how. This 30-day course spills the secrets of learning anything easily and quickly. Gift them a super power, that will make learning super simple",
-    "amount": "1999",
-    "discount": "1499",
-    "event": "12/24/2021",
-    "hover": "recommended for kids who don’t like studying",
-    "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_QL_TRAILER.mp4"
-  },
-  {
+    "_id": "61ba09114093eaba5416b4da",
+    "course_id": "61948b6d259f68f4edacefba",
     "fname": "Rich and",
     "lname": "How!",
     "title": "Rich and How!",
@@ -106,5 +98,25 @@
     "event": "12/24/2021",
     "hover": "recommended for kids who want to get rich",
     "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_RNH_TRAILER.mp4"
+  },
+  {
+    "_id": "61ba09114093eaba5416b4da",
+    "course_id": "61948b6d259f68f4edacefba",
+    "fname": "Quick",
+    "lname": "Learning",
+    "title": "Quick Learning",
+    "cname": "LUVYA Future",
+    "future": "Film Maker",
+    "join": "Luvya + 3015",
+    "id": 5,
+    "img": "https://i.ibb.co/r7YP0Pt/Quick-learning-1.png",
+    "image": "https://i.ibb.co/mSXbPjX/Artboard-10.png",
+    "description": "I can learn anything. But you have to give me 30 days",
+    "descriptionpart": "Learning is easy. when you know how. This 30-day course spills the secrets of learning anything easily and quickly. Gift them a super power, that will make learning super simple",
+    "amount": "1999",
+    "discount": "1499",
+    "event": "12/24/2021",
+    "hover": "recommended for kids who don’t like studying",
+    "video": "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_QL_TRAILER.mp4"
   }
 ]

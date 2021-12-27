@@ -23,13 +23,20 @@ export async function courses() {
 }
 
 export async function courseDetail(id) {
-  const result = await axios.get(`${url}${course}/${id}`);
+  const result = await axios.get(`${url}${course}`);
   if (result.status === 200) {
-    return result.data.data;
+    // find using id
+    const courses = result.data?.data?.[0];
+    const subjectData = courses?.subject?.find((subject) => subject._id === id);
+    return {
+      course_id:courses?._id,
+      amount: 1999,
+      thumbnailUrl: courses?.thumbnailUrl,
+      ...subjectData,
+    };
   }
   return {};
 }
-
 
 export async function verifyOtpBeforeSend(data = {}) {
   const result = await axios.post(`${url}${userLogin}`, {
@@ -51,7 +58,7 @@ export async function verifyOtpData(data = {}) {
   return {};
 }
 
-export async function updateProfile(accessToken=token,data = {}) {
+export async function updateProfile(accessToken = token, data = {}) {
   const result = await axios.put(
     `${url}${userUpdateProfile}`,
     {
@@ -69,7 +76,7 @@ export async function updateProfile(accessToken=token,data = {}) {
   return {};
 }
 
-export async function getBoard(accessToken=token) {
+export async function getBoard(accessToken = token) {
   const result = await axios.get(`${url}${boards}`, {
     headers: {
       Authorization: accessToken,
