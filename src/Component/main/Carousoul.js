@@ -216,7 +216,7 @@ const Sliders = ({ Slidercard,index }) => {
             <video
               id="auto-play-video_button"
               class="hover-webm"
-              // autoPlay={true}
+              autoPlay={true}
               loop={true}
               muted={false}
               preload
