@@ -122,12 +122,12 @@ const Page = ({ match }) => {
             </div>
           </div>
           <div className="page-promo-code mb-5">
-            <input
+            {/* <input
               type="text"
               placeholder="Promo Code"
               className="input me-3"
             />
-            <input type="submit" className="apply" value="Apply" />
+            <input type="submit" className="apply" value="Apply" /> */}
           </div>
           <div className="discount-gift-section  flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
