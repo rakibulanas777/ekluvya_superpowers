@@ -32,7 +32,8 @@ const Page = ({ match }) => {
           user_id,
           phone_number: phoneNumber,
           email,
-          course_id: id,
+          course_id: value?.course_id,
+          subject_id: id,
           course_amount: value?.discount || value?.amount || 100,
           accessToken: token,
         });
@@ -51,17 +52,23 @@ const Page = ({ match }) => {
     async function getCourses() {
       const courseData = await courseDetail(id);
       getValue(courseData);
+      // const courseData = await courseDetail(id);
+      // console.log({ courseData });
+      // getValue(courseData);
+      fetch("../../../data.json")
+        .then((res) => res.json())
+        .then((data) => getValue(data.find((item) => item._id === id)));
     }
     getCourses();
   }, [id]);
   const {
-    courseName: title,
-    cname = "ASHNI Future",
+    title,
+    cname = "ASHINI Future",
     future = "Entrepreneur",
     join = 0,
-    thumbnailUrl: image,
+    image,
     description = "Testimonial",
-    amount = 100, // not getting from api 
+    amount = 1999, // not getting from api 
     discount,
     descriptionpart = "No Description",
     video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",
@@ -116,14 +123,14 @@ const Page = ({ match }) => {
               <b>{description_two}</b>
             </div>
           </div>
-          {/* <div className="page-promo-code mb-5">
-            <input
+          <div className="page-promo-code mb-5">
+            {/* <input
               type="text"
               placeholder="Promo Code"
               className="input me-3"
             />
-            <input type="submit" className="apply" value="Apply" />
-          </div> */}
+            <input type="submit" className="apply" value="Apply" /> */}
+          </div>
           <div className="discount-gift-section  flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
