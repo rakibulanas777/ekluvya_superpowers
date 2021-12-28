@@ -12,6 +12,7 @@ header {
   transform: translate(-50%, -50%);
   margin-left: 1.5rem;
 }
+
 .main-title {
   color: #e61277;
 
@@ -46,6 +47,7 @@ header {
   .main {
     width: 70%;
     margin-left: -2rem;
+    top: 60%;
   }
   .main-description {
     width: 60%;
@@ -62,6 +64,9 @@ header {
   .main-description {
     width: 90%;
   }
+  .main {
+    top: 70%;
+  }
 }
 @media (max-width: 380px) {
   .main-title-1 {
@@ -72,7 +77,9 @@ header {
   }
   .main {
     width: 70%;
-    top: 60%;
+  }
+  header {
+    height: 700px;
   }
   .main-description {
     width: 90%;

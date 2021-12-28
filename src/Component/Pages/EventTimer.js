@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Clock from "./Clock";
 
-const EventTimer = ({ dateevent }) => {
+const EventTimer = ({ dateevent = "Dec 28,2021" }) => {
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
 
   let interval;
-  const countDownDate = new Date("Dec 28,2021").getTime();
+  // make a dynamic date
+  const countDownDate = new Date(dateevent).getTime();
   const startTimer = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();

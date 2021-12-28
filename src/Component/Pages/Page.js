@@ -9,35 +9,71 @@ import LoginModal from "../Modal/LoginModal";
 import VideoModal from "../Modal/VideoModal";
 import { useParams } from "react-router";
 import EventTimer from "./EventTimer";
+import { courseDetail } from "../../api_call";
+import { displayRazorpay } from "../Modal/razorpay";
 const Page = ({ match }) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const { id } = useParams();
+
+  const [value, getValue] = useState({});
+  const handleOpen = () => {
+    let getToken = localStorage.getItem("access-token");
+    if (getToken) {
+      getToken = JSON.parse(getToken);
+      const token=getToken.token
+      const user_id = getToken.id;
+      if (!user_id) {
+        setOpen(true);
+      } else {
+        const phoneNumber = getToken.phoneNumber;
+        const email = getToken.email;
+  
+        displayRazorpay({
+          user_id,
+          phone_number: phoneNumber,
+          email,
+          course_id: value?.course_id,
+          subject_id: id,
+          course_amount: value?.discount || value?.amount || 100,
+          accessToken: token,
+        });
+      }
+    } else {
+      setOpen(true);
+    }
+  };
   const handleClose = () => setOpen(false);
 
   const [open2, setOpen2] = React.useState(false);
   const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
 
-  const { id } = useParams();
-  console.log(id);
-
-  const [value, getValue] = useState([]);
   useEffect(() => {
-    fetch("../../../data.json")
-      .then((res) => res.json())
-      .then((data) => getValue(data[id - 1]));
-  }, []);
-
+    async function getCourses() {
+      const courseData = await courseDetail(id);
+      getValue(courseData);
+      // const courseData = await courseDetail(id);
+      // console.log({ courseData });
+      // getValue(courseData);
+      fetch("../../../data.json")
+        .then((res) => res.json())
+        .then((data) => getValue(data.find((item) => item._id === id)));
+    }
+    getCourses();
+  }, [id]);
   const {
     title,
-    cname,
-    future,
-    join,
+    cname = "ASHINI Future",
+    future = "Entrepreneur",
+    join = 0,
     image,
-    description,
-    amount,
+    description = "Testimonial",
+    amount = 1999, // not getting from api 
     discount,
-    descriptionpart,
+    descriptionpart = "No Description",
+    video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",
+    expiryDate = "Dec 28,2021",
+    description_two = "Future greatness @ the cost of a family dinner",
   } = value;
 
   return (
@@ -74,7 +110,7 @@ const Page = ({ match }) => {
                   <div class="icon">
                     <i class="fas fa-play"></i>
                   </div>
-                  <span>Watch tailor</span>
+                  <span>Watch trailer</span>
                 </div>
                 {/* <span className="tailor">Watch tailor</span> */}
               </div>
@@ -83,17 +119,18 @@ const Page = ({ match }) => {
               {descriptionpart}
             </div>
             <div className="page-last-text">
-              <b>Future greatness @ the cost of a family dinner</b>
+              {/* Make a dynamic */}
+              <b>{description_two}</b>
             </div>
           </div>
-          {/* <div className="page-promo-code mb-5">
-            <input
+          <div className="page-promo-code mb-5">
+            {/* <input
               type="text"
               placeholder="Promo Code"
               className="input me-3"
             />
-            <input type="submit" className="apply" value="Apply" />
-          </div> */}
+            <input type="submit" className="apply" value="Apply" /> */}
+          </div>
           <div className="discount-gift-section  flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
@@ -110,30 +147,38 @@ const Page = ({ match }) => {
               </div>
               <div className="number">
                 <span className="number-box">
-                  <img src={line} className="line" alt="" />{" "}
+                  {discount && <img src={line} className="line" alt="" />}
                   <span>₹ {amount}</span>
                 </span>
               </div>
             </div>
-            <div className="discount-money mt-lg-0 mb-lg-0 mx-auto mx-lg-0">
-              <div className="discount">
-                ₹<span className="discount-number-box"> {discount}</span>
+            {discount && (
+              <div className="discount-money mt-lg-0 mb-lg-0 mx-auto mx-lg-0">
+                <div className="discount">
+                  ₹<span className="discount-number-box"> {discount}</span>
+                </div>
+                <div className="offer">
+                  offer expires in <EventTimer dateevent={expiryDate} />
+                </div>
               </div>
-              <div className="offer">
-                offer expires in <EventTimer dateevent={value} />
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
 
-      <LoginModal openbtn={handleOpen} closebtn={handleClose} open={open} />
+      <LoginModal
+        openbtn={handleOpen}
+        closebtn={handleClose}
+        open={open}
+        courseDetails={value}
+      />
       <VideoModal
         openbtn2={handleOpen2}
         closebtn2={handleClose2}
         open2={open2}
-        videofile={value}
+        videofile={video}
       />
+      <div id="recaptcha-container"></div>
     </div>
   );
 };

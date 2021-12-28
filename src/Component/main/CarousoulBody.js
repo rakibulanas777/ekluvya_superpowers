@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Slider.css";
+import "./SliderBody.css";
 import { Link } from "react-router-dom";
 import img3 from "../../image/Gift_hover.svg";
 import topGift from "../../image/top_gift.svg";
@@ -77,7 +77,7 @@ const Carousoul = ({ onClick }) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
           infinite: true,
@@ -95,17 +95,12 @@ const Carousoul = ({ onClick }) => {
     ],
   };
   return (
-    <div className="container-fluid mb-5 carusoal">
-      <a name="gift"></a>
-      <Slider {...settings} className="mb-5">
+    <div className="container mb-0 carusoal">
+      <Slider {...settings} className="mb-0">
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
         ))}
       </Slider>
-      <div className="arrow-icon-carrosoul  d-flex justify-content-around  mx-auto">
-        <i class="fas fa-chevron-left" onClick={onClick}></i>
-        <i class="fas fa-chevron-right"></i>
-      </div>
     </div>
   );
 };
@@ -113,25 +108,51 @@ const Carousoul = ({ onClick }) => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard }) => {
-  const { _id, courseName, img, hover } = Slidercard;
+  const { _id, courseName, img, hover, video } = Slidercard;
   return (
-    <div className="img_parent">
-      <span className="img_parent_hover">
-        <Link to={`/page/${_id}`} className="link">
-          <div className="image1">
-            <img src={img3} alt="" width="100%" className=" img-fluid" />
-            <p className="w-60 text-white">{hover}</p>
-          </div>
-          <div>
-            <div className="carousel-text">
-              <Link to={`/page/${_id}`} className="link">
-                {courseName}
-              </Link>
-            </div>
-            <img src={img} alt="" className="image2" />
-          </div>
-        </Link>
-      </span>
-    </div>
+    <>
+      <div
+        class={`fadeIn portfolio-three masonry-item has-hover-thumb portfolio-item-slug wow post-${_id} portfolio-item type-portfolio-item status-publish has-post-thumbnail hentry filters-youtube loaded`}
+        data-wow-delay="224ms"
+        style={{
+          height: "150px",
+          width: "90%",
+          visibility: " visible",
+          animationDelay: "224ms",
+          animationName: "fadeIn",
+        }}
+      >
+        <div class="picture1 ">
+          <Link to={`/page/${_id}`} className="link">
+            <video
+              id="auto-play-video_button"
+              class="hover-webm"
+              // autoPlay={true}
+
+              loop={true}
+              muted={false}
+              preload
+              controls
+              onMouseOver={(e) => e.target.play()}
+              onMouseOut={(e) => e.target.pause()}
+            >
+              {/* <source
+              src="https://plexx.mallinidesign.com/wp-content/uploads/2017/09/chas.webm"
+              type="video/webm"
+            /> */}
+              <source src={video} type="video/mp4" />
+            </video>
+
+            <div
+              class="thumb"
+              data-ratio="1.7786561264822"
+              style={{
+                backgroundImage: `url(${img})`,
+              }}
+            ></div>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };

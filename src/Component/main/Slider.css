@@ -4,6 +4,7 @@
 .main-img-hover {
   position: relative;
 }
+
 .carousel-text {
   position: absolute;
   left: 5rem;
@@ -97,16 +98,14 @@
   opacity: 0;
   /* height:400px; */
   width: 290px;
-  max-width:300px !important;
-
+  max-width: 300px !important;
 }
-.image1 p{
+.image1 p {
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.75px;
-  position:absolute;
-  left:80px;
-
+  position: absolute;
+  left: 80px;
 }
 
 .image2 {
@@ -121,7 +120,7 @@
 .img_parent_hover:hover .image2 {
   transition: 0.3s opacity linear;
   opacity: 0.3;
-  border: none;    
+  border: none;
   width: 165px;
   height: 150px;
 }
@@ -131,7 +130,6 @@
   opacity: 1;
   border: none;
 }
-
 
 .slick-list {
   height: 350px;

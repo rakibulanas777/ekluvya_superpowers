@@ -29,11 +29,10 @@
 }
 .mainbody {
   padding: 0px;
-  position: absolute;
-  bottom: -11.5rem;
-  right: -13rem;
+  position: relative;
 }
 .header-bottom {
+  margin-top: -200px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -51,11 +50,12 @@
 
 .header-bottom-text {
   color: white;
-  text-transform: capitalize;
+  /*  text-transform: capitalize; */
   font-size: 18px;
 }
 .main-video {
   margin-left: 2rem;
+  margin-top: 10rem;
 }
 
 @media (max-width: 990px) {
@@ -65,11 +65,10 @@
   .header-bottom-width {
     width: 80%;
   }
-  .mainbody{
-    right:0rem;
-    bottom: -10rem;
+  .mainbody {
+    right: 0rem;
+    bottom: -9rem;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -79,10 +78,18 @@
   .main-img {
     width: 100%;
   }
+  .mainbody {
+    right: 0rem;
+    bottom: -7.9rem;
+  }
 }
 @media (max-width: 410px) {
   .header-bottom-text {
     font-size: 15px;
+  }
+  .mainbody {
+    right: 0rem;
+    bottom: -7rem;
   }
 }
 @media (max-width: 370px) {
