@@ -29,7 +29,7 @@ export async function courseDetail(id) {
     const courses = result.data?.data?.[0];
     const subjectData = courses?.subject?.find((subject) => subject._id === id);
     return {
-      course_id:courses?._id,
+      course_id: courses?._id,
       amount: 1999,
       thumbnailUrl: courses?.thumbnailUrl,
       ...subjectData,

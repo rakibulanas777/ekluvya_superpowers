@@ -50,6 +50,8 @@ const Page = ({ match }) => {
 
   useEffect(() => {
     async function getCourses() {
+      const courseData = await courseDetail(id);
+      getValue(courseData);
       // const courseData = await courseDetail(id);
       // console.log({ courseData });
       // getValue(courseData);
@@ -64,9 +66,9 @@ const Page = ({ match }) => {
     cname = "ASHINI Future",
     future = "Entrepreneur",
     join = 0,
-     image,
+    image,
     description = "Testimonial",
-    amount = 1999, // not getting from api
+    amount = 1999, // not getting from api 
     discount,
     descriptionpart = "No Description",
     video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",

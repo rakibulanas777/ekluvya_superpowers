@@ -32,7 +32,6 @@ function SamplePrevArrow(props) {
 
 const Carousoul = ({ onClick }) => {
   const [value, getValue] = useState([]);
-  const [coursesData, getCoursesData] = useState([]);
 
   useEffect(() => {
     async function getCourses() {
@@ -136,29 +135,29 @@ const Carousoul = ({ onClick }) => {
 
 export default Carousoul;
 
-// const Sliders = ({ Slidercard }) => {
-//   const { _id, courseName, thumbnailUrl:img, hover } = Slidercard;
-//   return (
-//     <div className="img_parent">
-//       <span className="img_parent_hover">
-//         <Link to={`/page/${_id}`} className="link">
-//           <div className="image1">
-//             <img src={img3} alt="" width="100%" className=" img-fluid" />
-//             <p className="w-60 text-white">{hover}</p>
-//           </div>
-//           <div>
-//             <div className="carousel-text">
-//               <Link to={`/page/${_id}`} className="link">
-//                 {courseName}
-//               </Link>
-//             </div>
-//             <img src={img} alt="" className="image2" />
-//           </div>
-//         </Link>
-//       </span>
-//     </div>
-//   );
-// };
+const Sliders = ({ Slidercard }) => {
+  const { _id, courseName, thumbnailUrl:img, hover } = Slidercard;
+  return (
+    <div className="img_parent">
+      <span className="img_parent_hover">
+        <Link to={`/page/${_id}`} className="link">
+          <div className="image1">
+            <img src={img} alt="" width="100%" className=" img-fluid" />
+            <p className="w-60 text-white">{hover}</p>
+          </div>
+          <div>
+            <div className="carousel-text">
+              <Link to={`/page/${_id}`} className="link">
+                {courseName}
+              </Link>
+            </div>
+            <img src={img} alt="" className="image2" />
+          </div>
+        </Link>
+      </span>
+    </div>
+  );
+};
 
 // const Sliders = ({ Slidercard }) => {
 //   const { _id, title: courseName, img, hover, video } = Slidercard;
@@ -194,57 +193,57 @@ export default Carousoul;
 //   );
 // };
 
-const Sliders = ({ Slidercard,index }) => {
-  const { _id, title: courseName, img, hover, video } = Slidercard;
+// const Sliders = ({ Slidercard,index }) => {
+//   const { _id, title: courseName, img, hover, video } = Slidercard;
   
-  return (
-    <>
-      <div
-        class={`fadeIn portfolio-three masonry-item has-hover-thumb portfolio-item-slug wow post-${_id} portfolio-item type-portfolio-item status-publish has-post-thumbnail hentry filters-youtube loaded`}
-        data-wow-delay="224ms"
-        style={{
-          height: "300px",
-          width: "100%",
-          visibility: " visible",
-          animationDelay: "224ms",
-          animationName: "fadeIn",
-          margin: "10px",
-        }}
-      >
-        <div class="picture">
-          <Link to={`/page/${_id}`} className="link">
-            <video
-              id="auto-play-video_button"
-              class="hover-webm"
-              // autoPlay={true}
-              loop={true}
-              muted={false}
-              preload
-              controls
-              onMouseOver={(e) => e.target.play()}
-              onMouseOut={(e) => e.target.pause()}
-            >
-              {/* <source
-              src="https://plexx.mallinidesign.com/wp-content/uploads/2017/09/chas.webm"
-              type="video/webm"
-            /> */}
-              <source src={video} type="video/mp4" />
-            </video>
+//   return (
+//     <>
+//       <div
+//         class={`fadeIn portfolio-three masonry-item has-hover-thumb portfolio-item-slug wow post-${_id} portfolio-item type-portfolio-item status-publish has-post-thumbnail hentry filters-youtube loaded`}
+//         data-wow-delay="224ms"
+//         style={{
+//           height: "300px",
+//           width: "100%",
+//           visibility: " visible",
+//           animationDelay: "224ms",
+//           animationName: "fadeIn",
+//           margin: "10px",
+//         }}
+//       >
+//         <div class="picture">
+//           <Link to={`/page/${_id}`} className="link">
+//             <video
+//               id="auto-play-video_button"
+//               class="hover-webm"
+//               // autoPlay={true}
+//               loop={true}
+//               muted={false}
+//               preload
+//               controls
+//               onMouseOver={(e) => e.target.play()}
+//               onMouseOut={(e) => e.target.pause()}
+//             >
+//               {/* <source
+//               src="https://plexx.mallinidesign.com/wp-content/uploads/2017/09/chas.webm"
+//               type="video/webm"
+//             /> */}
+//               <source src={video} type="video/mp4" />
+//             </video>
 
-            <div
-              class="thumb"
-              data-ratio="1.7786561264822"
-              style={{
-                backgroundImage: `url(${img})`,
-              }}
-            ></div>
-          </Link>
-        </div>
-        <div class="item-description ">
-          <h2>{courseName}</h2>
-          {/* <div class="item-filter">Youtube </div> */}
-        </div>
-      </div>
-    </>
-  );
-};
+//             <div
+//               class="thumb"
+//               data-ratio="1.7786561264822"
+//               style={{
+//                 backgroundImage: `url(${img})`,
+//               }}
+//             ></div>
+//           </Link>
+//         </div>
+//         <div class="item-description ">
+//           <h2>{courseName}</h2>
+//           {/* <div class="item-filter">Youtube </div> */}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
