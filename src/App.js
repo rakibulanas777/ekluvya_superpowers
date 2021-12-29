@@ -7,10 +7,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Page from "./Component/Pages/Page";
 import Navbar1 from "./Component/Home/Navbar/Navbar1";
 import Navbar from "./Component/Home/Navbar/Navbar";
+import Icon from "./Component/Icon";
 
 function App() {
-  
-
   return (
     <div className="App">
       <Router>
@@ -20,12 +19,14 @@ function App() {
             <Home></Home>
             <Main />
             <Carousoul />
+            <Icon />
           </Route>
           <Route exact path="/home">
             <Navbar />
             <Home></Home>
             <Main />
             <Carousoul />
+            <Icon />
           </Route>
           <Route exact path="/page/:id">
             <Navbar1 />
