@@ -42,7 +42,7 @@ const Carousoul = ({ onClick }) => {
       // console.log({ courseData });
       // getCoursesData(courseData?.[0]);
       // getValue(courseData?.[0]?.subject || []);
-      fetch("../../../data.json")
+      fetch("../../../body_data.json")
         .then((res) => res.json())
         .then((data) => getValue(data));
     }
@@ -125,7 +125,7 @@ export default Carousoul;
 
 const Sliders = ({ Slidercard, setHandlePopup }) => {
   const { _id, title:courseName, img, hover, video } = Slidercard;
-  const image_epi = "Memory_Episode_Image.png"
+  const image_epi = img
   return (
     <>
       <div
@@ -178,7 +178,7 @@ const Sliders = ({ Slidercard, setHandlePopup }) => {
           </Link>
         </div>
         <div class="item-description ">
-        {courseName}
+          <h2>{courseName}</h2>
           {/* <div class="item-filter">Youtube </div> */}
         </div>
       </div>
