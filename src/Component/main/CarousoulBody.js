@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import img3 from "../../image/Gift_hover.svg";
 import topGift from "../../image/top_gift.svg";
 import { courses } from "../../api_call";
+import VideoModal from "../Modal/VideoModal";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -30,7 +32,10 @@ function SamplePrevArrow(props) {
 
 const Carousoul = ({ onClick }) => {
   const [value, getValue] = useState([]);
-
+  const [handlePopup, setHandlePopup] = useState({
+    show: false,
+    video: "",
+  });
   useEffect(() => {
     async function getCourses() {
       // const courseData = await courses();
@@ -94,21 +99,33 @@ const Carousoul = ({ onClick }) => {
       },
     ],
   };
+
   return (
     <div className="container mb-0 carusoal">
       <Slider {...settings} className="mb-0">
         {value.map((sliders) => (
-          <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
+          <Sliders
+            Slidercard={sliders}
+            id={sliders.id}
+            setHandlePopup={setHandlePopup}
+          ></Sliders>
         ))}
       </Slider>
+      <VideoModal
+        openbtn2={() => {}}
+        closebtn2={() => setHandlePopup({ show: false, video: "" })}
+        open2={handlePopup.show}
+        videofile={handlePopup.video}
+      />
     </div>
   );
 };
 
 export default Carousoul;
 
-const Sliders = ({ Slidercard }) => {
-  const { _id, courseName, img, hover, video } = Slidercard;
+const Sliders = ({ Slidercard, setHandlePopup }) => {
+  const { _id, title:courseName, img, hover, video } = Slidercard;
+  const image_epi = "Memory_Episode_Image.png"
   return (
     <>
       <div
@@ -123,12 +140,20 @@ const Sliders = ({ Slidercard }) => {
         }}
       >
         <div class="picture1 ">
-          <Link to={`/page/${_id}`} className="link">
+          <Link
+            to={"#"}
+            className="link"
+            onClick={() =>
+              setHandlePopup({
+                show: true,
+                video: video,
+              })
+            }
+          >
             <video
               id="auto-play-video_button"
               class="hover-webm"
               // autoPlay={true}
-
               loop={true}
               muted={false}
               preload
@@ -147,10 +172,14 @@ const Sliders = ({ Slidercard }) => {
               class="thumb"
               data-ratio="1.7786561264822"
               style={{
-                backgroundImage: `url(${img})`,
+                backgroundImage: `url(${image_epi})`,
               }}
             ></div>
           </Link>
+        </div>
+        <div class="item-description ">
+        {courseName}
+          {/* <div class="item-filter">Youtube </div> */}
         </div>
       </div>
     </>

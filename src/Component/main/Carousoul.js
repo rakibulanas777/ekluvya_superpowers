@@ -113,7 +113,8 @@ const Carousoul = ({ onClick }) => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard }) => {
-  const { _id, courseName, img, hover } = Slidercard;
+  const { _id, title:courseName, img, hover } = Slidercard;
+
   return (
     <div className="img_parent">
       <span className="img_parent_hover">
