@@ -20,14 +20,14 @@ const Page = ({ match }) => {
     let getToken = localStorage.getItem("access-token");
     if (getToken) {
       getToken = JSON.parse(getToken);
-      const token=getToken.token
+      const token = getToken.token;
       const user_id = getToken.id;
       if (!user_id) {
         setOpen(true);
       } else {
         const phoneNumber = getToken.phoneNumber;
         const email = getToken.email;
-  
+
         displayRazorpay({
           user_id,
           phone_number: phoneNumber,

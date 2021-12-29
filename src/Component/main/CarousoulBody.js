@@ -123,8 +123,8 @@ const Carousoul = ({ onClick }) => {
 export default Carousoul;
 
 const Sliders = ({ Slidercard, setHandlePopup }) => {
-  const { _id, title:courseName, img, hover, video } = Slidercard;
-  const image_epi = img
+  const { _id, title: courseName, img, hover, video } = Slidercard;
+  const image_epi = img;
   return (
     <>
       <div

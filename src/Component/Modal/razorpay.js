@@ -34,6 +34,7 @@ export async function displayRazorpay({
   course_amount = 1,
   accessToken = token,
 }) {
+  console.log({course_id,subject_id})
   const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
   if (!res) {
