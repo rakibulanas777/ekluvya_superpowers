@@ -34,7 +34,6 @@ const Carousoul = ({ onClick }) => {
   useEffect(() => {
     async function getCourses() {
       // const courseData = await courses();
-      // console.log({ courseData });
       // getCoursesData(courseData?.[0]);
       // getValue(courseData?.[0]?.subject || []);
       fetch("../../../data.json")

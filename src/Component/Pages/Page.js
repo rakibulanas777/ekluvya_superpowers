@@ -53,7 +53,6 @@ const Page = ({ match }) => {
       const courseData = await courseDetail(id);
       getValue(courseData);
       // const courseData = await courseDetail(id);
-      // console.log({ courseData });
       // getValue(courseData);
       fetch("../../../data.json")
         .then((res) => res.json())
