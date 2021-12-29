@@ -24,23 +24,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div className="container-fluid mainbody">
-        <div className="header-bottom ">
-          <div className="header-bottom-width">
-            <div className="header-bottom-text">
-              Gift your kids skills <br /> that aren’t taught at schools
-            </div>
-          </div>
-
-          <div className="header-bottom-img">
-            <img src={giftcard} className="img-fluid" width="200px" alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <CarousoulBody />
-      </div>
     </header>
   );
 };

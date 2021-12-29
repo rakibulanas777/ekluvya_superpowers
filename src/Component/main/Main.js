@@ -8,10 +8,27 @@ import gif from "../../image/particles-small.gif";
 
 import arrow from "../../image/Path 67.svg";
 import "./main.css";
+import CarousoulBody from "./CarousoulBody";
 const Main = () => {
   return (
-    <>
-      <div className="container-fluid main-video mt-5">
+    <main>
+      <div className="container-fluid mainbody">
+        <div className="container-fluid carousoul">
+          <CarousoulBody />
+        </div>
+        <div className="header-bottom ">
+          <div className="header-bottom-width">
+            <div className="header-bottom-text">
+              Gift your kids skills <br /> that aren’t taught at schools
+            </div>
+          </div>
+
+          <div className="header-bottom-img">
+            <img src={giftcard} className="img-fluid" width="200px" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid main-video">
         <div className="container  main-section-2  mb-5">
           <div className="row">
             <div className="col-10 col-lg-5  mx-auto">
@@ -56,7 +73,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 
