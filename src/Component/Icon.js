@@ -5,7 +5,7 @@ import './icon.css'
 import { Link } from "react-router-dom";
 const Icon = () => {
   return (
-    <div className="container mt-5 " style={{ marginBottom: "2%" }}>
+    <div className="container mt-5 " style={{ marginBottom: "6%" }}>
       <div className="icon d-flex  justify-content-center">
         <Link
           to={{
@@ -22,8 +22,8 @@ const Icon = () => {
           <img src={applestore} width="150px" className="img-fluid" alt="" />
         </div> */}
       </div>
-      <div>
-        <Link className="privacy_policy_link"  to="/privacy-policy.html">
+      <div className="d-flex justify-content-center mt-5">
+        <Link className="privacy_policy_link" to="/privacy-policy.html">
           Privacy Policy
         </Link>
       </div>
