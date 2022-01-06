@@ -36,11 +36,37 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
   const [open1, setOpen] = React.useState(false);
   const [registerData, setRegisterData] = useState({});
   const [loading, setLoading] = useState(false);
+  const [leadCall, setLeadCall] = useState(false);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const handleLeadApiCall = () => {
+    console.log({ leadCall });
+    if (!leadCall) {
+      leadsApi({
+        firstName: registerData?.firstname,
+        lastName: registerData?.lastname,
+        phoneNumbers: [
+          {
+            type: "MOBILE",
+            code: "IN",
+            value: registerData["phone"],
+            dialCode: countryCode,
+            primary: true,
+          },
+        ],
+        emails: [
+          { type: "OFFICE", value: registerData["email"], primary: true },
+        ],
+      });
+    }
+    setLeadCall(true);
+  };
+
   const sendOtp = (e) => {
     e.preventDefault();
+    handleLeadApiCall();
     if (!window.recaptchaVerifier) {
       window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
         "recaptcha-container",
@@ -67,20 +93,7 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
   const handleSignUp = () => {
     const appVerifier = window.recaptchaVerifier;
     let phoneNumber = `${countryCode}${registerData["phone"]}`;
-    leadsApi({
-      firstName: registerData?.firstname,
-      lastName: registerData?.lastname,
-      phoneNumbers: [
-        {
-          type: "MOBILE",
-          code: "IN",
-          value: registerData["phone"],
-          dialCode: countryCode,
-          primary: true,
-        },
-      ],
-      emails: [{ type: "OFFICE", value: registerData["email"], primary: true }],
-    });
+
     setLoading(true);
     firebase
       .auth()
@@ -198,6 +211,9 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
     newRegisterData[field] = value;
     setRegisterData(newRegisterData);
   };
+  useEffect(() => {
+    setLeadCall(false);
+  }, [open]);
   return (
     <div className="container">
       <Modal
