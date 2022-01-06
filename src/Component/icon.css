@@ -1,3 +1,11 @@
 .hover-icon:hover{
     cursor: pointer;
 }
+
+.privacy_policy_link{
+    color: #fff;
+    text-decoration: none;
+}
+.privacy_policy_link:hover{
+    color:gray
+}

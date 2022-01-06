@@ -8,6 +8,8 @@ import Page from "./Component/Pages/Page";
 import Navbar1 from "./Component/Home/Navbar/Navbar1";
 import Navbar from "./Component/Home/Navbar/Navbar";
 import Icon from "./Component/Icon";
+import PrivacyPolicy from "./Component/Pages/PrivacyPolicy";
+
 
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
           <Route exact path="/page/:id">
             <Navbar1 />
             <Page />
+          </Route>
+          <Route exact path="/privacy-policy.html">
+<PrivacyPolicy />
           </Route>
         </Switch>
       </Router>
