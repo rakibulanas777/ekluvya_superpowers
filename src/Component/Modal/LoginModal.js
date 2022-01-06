@@ -11,6 +11,7 @@ import {
   updateProfile,
   verifyOtpData,
   verifyOtpBeforeSend,
+  leadsApi,
 } from "../../api_call";
 import { countryCode } from "../../requests";
 import { ScaleLoader } from "react-spinners";
@@ -66,6 +67,20 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
   const handleSignUp = () => {
     const appVerifier = window.recaptchaVerifier;
     let phoneNumber = `${countryCode}${registerData["phone"]}`;
+    leadsApi({
+      firstName: registerData?.firstname,
+      lastName: registerData?.lastname,
+      phoneNumbers: [
+        {
+          type: "MOBILE",
+          code: "IN",
+          value: registerData["phone"],
+          dialCode: countryCode,
+          primary: true,
+        },
+      ],
+      emails: [{ type: "OFFICE", value: registerData["email"], primary: true }],
+    });
     setLoading(true);
     firebase
       .auth()
@@ -135,7 +150,7 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
         email,
         course_id: courseDetails?.id,
         course_amount: courseDetails?.discount || courseDetails?.amount || 100,
-        accessToken:token,
+        accessToken: token,
       });
     } else {
       toast.error("user info not getting please try again ", {

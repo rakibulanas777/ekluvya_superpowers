@@ -7,6 +7,8 @@ import {
   boards,
   classes,
   userLogin,
+  lead_url,
+  lead_api_key,
 } from "./requests";
 let token = localStorage.getItem("access-token");
 if (token) {
@@ -96,6 +98,26 @@ export async function getClass(accessToken = token) {
   });
   if (result.status === 200) {
     return result.data?.data[0]?._id;
+  }
+  return {};
+}
+
+export async function leadsApi(data) {
+  const result = await axios.post(
+    lead_url,
+    {
+      ...data,
+    },
+    {
+      headers: {
+        "api-key": lead_api_key,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }
+  );
+  if (result.status === 200) {
+    return result.data;
   }
   return {};
 }

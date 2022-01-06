@@ -1,4 +1,5 @@
 export const url = "http://api.ekluvya.guru/";
+export const lead_url = 'https://api.kylas.io/v1/leads';
 
 // Listing and pass id in last
 export const course = "course";
@@ -21,3 +22,5 @@ export const firebaseConfig = {
 };
 
 export const razorpay_api_key_id = process.env.REACT_APP_RAZORPAY_KEY_ID;
+
+export const lead_api_key= process.env.REACT_APP_LEAD_API_KEY;
