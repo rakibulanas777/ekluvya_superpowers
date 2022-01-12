@@ -50,12 +50,14 @@ const Carousoul = ({ onClick }) => {
 
   var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 8,
-    arrows: false,
+    arrows: true,
     slidesToScroll: 8,
     initialSlide: 8,
+    autoplay: true,
+    autoplaySpeed: 1000,
     // width:"300px",
     responsive: [
       {

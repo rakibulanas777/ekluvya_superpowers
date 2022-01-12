@@ -89,11 +89,17 @@
   }
   .mainbody {
     right: 0rem;
-    bottom: -7rem;
+    bottom: 5rem;
+  }
+  .main-video{
+    margin-top: 0rem !important;
   }
 }
 @media (max-width: 370px) {
   .header-bottom-text {
     font-size: 10px;
   }
+}
+.slick-arrow {
+  top:20% !important;
 }

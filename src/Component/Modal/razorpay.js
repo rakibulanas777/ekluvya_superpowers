@@ -68,7 +68,6 @@ export async function displayRazorpay({
     order_id: order_id,
     isNonAcademicCourse: true,
     handler: async function (response) {
-      console.info({ response });
       const data = {
         orderCreationId: order_id,
         razorpayPaymentId: response.razorpay_payment_id,
