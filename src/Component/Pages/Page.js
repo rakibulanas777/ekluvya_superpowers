@@ -52,11 +52,18 @@ const Page = ({ match }) => {
     async function getCourses() {
       const courseData = await courseDetail(id);
       getValue(courseData);
+      console.log({ courseData });
       // const courseData = await courseDetail(id);
       // getValue(courseData);
       fetch("../../../data.json")
         .then((res) => res.json())
-        .then((data) => getValue(data.find((item) => item._id === id)));
+        .then((data) =>
+          getValue({
+            ...data.find((item) => item._id === id),
+            discount: null,
+            amount: courseData?.price,
+          })
+        );
     }
     getCourses();
   }, [id]);
@@ -67,7 +74,7 @@ const Page = ({ match }) => {
     join = 0,
     image,
     description = "Testimonial",
-    amount = 1999, // not getting from api 
+    amount = 1999, // not getting from api
     discount,
     descriptionpart = "No Description",
     video = "https://ekluvya.s3.ap-south-1.amazonaws.com/video/EK_WH_TRAILER.mp4",
