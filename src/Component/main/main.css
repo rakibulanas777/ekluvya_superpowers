@@ -83,7 +83,7 @@
     bottom: -7.9rem;
   }
 }
-@media (max-width: 410px) {
+@media (max-width: 440px) {
   .header-bottom-text {
     font-size: 15px;
   }
