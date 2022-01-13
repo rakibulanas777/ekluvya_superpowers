@@ -66,7 +66,7 @@ export async function displayRazorpay({
     description: course_name, // course name
     image: { logo },
     order_id: order_id,
-    isNonAcademicCourse: true,
+
     handler: async function (response) {
       const data = {
         orderCreationId: order_id,
@@ -96,6 +96,7 @@ export async function displayRazorpay({
       courseId: course_id, // make a dynamic
       subjectId: subject_id, // make a dynamic
       subject_ids: subject_id, // make a dynamic
+      isNonAcademicCourse: true,
     },
     theme: {
       color: "#FF7000",
