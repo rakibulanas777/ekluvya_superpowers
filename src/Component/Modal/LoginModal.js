@@ -165,6 +165,7 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
         course_id: courseDetails?.course_id,
         course_amount: courseDetails?.discount || courseDetails?.amount || 100,
         accessToken: token,
+        subject_id: courseDetails?._id
       });
     } else {
       toast.error("user info not getting please try again ", {

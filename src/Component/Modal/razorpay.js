@@ -95,6 +95,7 @@ export async function displayRazorpay({
       classId: class_id, // make a dynamic
       courseId: course_id, // make a dynamic
       subjectId: subject_id, // make a dynamic
+      subject_ids: subject_id, // make a dynamic
     },
     theme: {
       color: "#FF7000",
