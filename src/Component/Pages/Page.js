@@ -57,12 +57,17 @@ const Page = ({ match }) => {
       // getValue(courseData);
       fetch("../../../data.json")
         .then((res) => res.json())
-        .then((data) =>
+        .then((data) =>{
+          const new_data=data.find((item) => item._id === id)
+          console.log({ new_data });
           getValue({
-            ...data.find((item) => item._id === id),
+            ...new_data,
             discount: null,
             amount: courseData?.price,
-          })
+          });
+        }
+
+          
         );
     }
     getCourses();

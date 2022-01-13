@@ -29,10 +29,11 @@ export async function courseDetail(id) {
   if (result.status === 200) {
     // find using id
     const courses = result.data?.data?.[0];
+    console.log({ id, subject: courses?.subject });
     const subjectData = courses?.subject?.find((subject) => subject._id === id);
+    console.log({ subjectData });
     return {
       course_id: courses?._id,
-      amount: 1999,
       thumbnailUrl: courses?.thumbnailUrl,
       ...subjectData,
     };
