@@ -157,11 +157,12 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
         JSON.stringify({ token, id: userId, name, email, phoneNumber })
       );
       closebtn();
+      console.log({ courseDetails });
       displayRazorpay({
         user_id: userId,
         phone_number: phoneNumber,
         email,
-        course_id: courseDetails?.id,
+        course_id: courseDetails?.course_id,
         course_amount: courseDetails?.discount || courseDetails?.amount || 100,
         accessToken: token,
       });

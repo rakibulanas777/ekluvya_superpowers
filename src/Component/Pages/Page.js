@@ -27,7 +27,7 @@ const Page = ({ match }) => {
       } else {
         const phoneNumber = getToken.phoneNumber;
         const email = getToken.email;
-
+        console.log({ value });
         displayRazorpay({
           user_id,
           phone_number: phoneNumber,
