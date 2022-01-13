@@ -156,7 +156,7 @@ const Page = ({ match }) => {
                   alt=""
                 />
               </div>
-              <div className="number">
+              <div className="number" onClick={handleOpen}>
                 <span className="number-box">
                   {discount && <img src={line} className="line" alt="" />}
                   <span>₹ {amount}</span>
