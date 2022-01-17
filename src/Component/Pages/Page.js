@@ -126,7 +126,7 @@ const Page = ({ match }) => {
                 {/* <span className="tailor">Watch tailor</span> */}
               </div>
             </div>
-            <div className="page-text-description w-50 mb-3 text-left">
+            <div className="page-text-description mb-3 text-left">
               {descriptionpart}
             </div>
             <div className="page-last-text">
@@ -145,7 +145,7 @@ const Page = ({ match }) => {
           <div className="discount-gift-section  flex-column flex-lg-row d-flex align-items-start mt-lg-0 mt-2">
             <div className="discount-gift-box d-flex me-4 mb-lg-0 mb-5 align-items-center justify-content-center ">
               <button className="text" onClick={handleOpen}>
-                Gift now
+                Buy Now
               </button>
               <div className="img">
                 <img

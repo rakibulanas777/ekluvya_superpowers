@@ -53,6 +53,7 @@
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
+  width: 50%;
 }
 .page-last-text {
   color: #ff3600;
@@ -245,6 +246,9 @@
   .text {
     font-size: 23px;
   }
+  .page-text-description {
+    width: 100%;
+  }
 }
 
 @media (max-width: 380px) {
@@ -259,14 +263,19 @@
   }
   .number-box span {
     font-size: 16px;
-    text-decoration: line-through;
   }
   .line {
     display: none;
   }
+  .page-text-description {
+    width: 100%;
+  }
 }
 @media (max-width: 350px) {
   .card {
+    width: 100%;
+  }
+  .page-text-description {
     width: 100%;
   }
 }

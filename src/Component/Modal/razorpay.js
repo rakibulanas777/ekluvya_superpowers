@@ -66,7 +66,6 @@ export async function displayRazorpay({
     description: course_name, // course name
     image: { logo },
     order_id: order_id,
-
     handler: async function (response) {
       const data = {
         orderCreationId: order_id,
