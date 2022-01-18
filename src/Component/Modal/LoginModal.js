@@ -42,7 +42,6 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
   const handleClose = () => setOpen(false);
 
   const handleLeadApiCall = () => {
-    console.log({ leadCall });
     if (!leadCall) {
       leadsApi({
         firstName: registerData?.firstname,

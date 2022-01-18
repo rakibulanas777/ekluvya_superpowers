@@ -1,4 +1,4 @@
-export const url = "http://api.ekluvya.guru/";
+export const url = "https://api.ekluvya.guru/";
 export const lead_url = 'https://api.kylas.io/v1/leads';
 
 // Listing and pass id in last
