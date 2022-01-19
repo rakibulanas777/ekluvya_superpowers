@@ -90,7 +90,7 @@ const Page = ({ match }) => {
   return (
     <div className="container mb-5">
       <div className="img-arrow-icon mb-5 text-center">
-        <img src={image1} width="16px" alt="" />
+        <img src={image1} width="16px" alt="" height="100%" />
       </div>
       <div className="row  g-4 card-part ">
         <div className="col-lg-3 col-10 mx-auto">

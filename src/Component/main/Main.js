@@ -24,7 +24,7 @@ const Main = () => {
           </div>
 
           <div className="header-bottom-img">
-            <img src={giftcard} className="img-fluid" width="200px" alt="" />
+            <img src={giftcard} className="img-fluid" width="200px" height="100%" alt="" />
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ const Main = () => {
                   className="icon-arrow d-lg-block d-none mt-5"
                   style={{ marginLeft: "20%" }}
                 >
-                  <img src={arrow} width="16px" alt="" />
+                  <img src={arrow} width="16px" height="100%" alt="" />
                 </div>
               </div>
             </div>

@@ -19,7 +19,7 @@ const Home = () => {
           ?
           <div className="icon-arrow mt-5" style={{ marginLeft: "20%" }}>
             <a href="#gift">
-              <img src={arrow} width="16px" alt="" />
+              <img src={arrow} width="16px" height="100%" alt="" />
             </a>
           </div>
         </div>

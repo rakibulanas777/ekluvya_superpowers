@@ -15,7 +15,7 @@ const Icon = () => {
           target="_blank"
         >
           <div className="playstore p-3 hover-icon">
-            <img src={playstore} className="img-fluid" width="150px" alt="" />
+            <img src={playstore} className="img-fluid" width="150px" height={"100%"} alt="" />
           </div>
         </Link>
         {/* <div className="applestore p-3 hover-icon">
