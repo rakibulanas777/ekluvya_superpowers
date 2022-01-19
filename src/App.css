@@ -5,4 +5,5 @@ body {
   opacity: 1;
   font-family: "Baloo 2", cursive;
   overflow-x: hidden;
+  font-display: swap;
 }

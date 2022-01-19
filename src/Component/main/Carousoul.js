@@ -121,7 +121,7 @@ const Sliders = ({ Slidercard }) => {
       <span className="img_parent_hover">
         <Link to={`/page/${_id}`} className="link">
           <div className="image1">
-            <img src={img3} alt="" width="100%" className=" img-fluid" />
+            <img src={img3} alt="gift" width="100%" height={"100%"}   className=" img-fluid" />
             <p className="w-60 text-white">{hover}</p>
           </div>
           <div>
@@ -130,7 +130,7 @@ const Sliders = ({ Slidercard }) => {
                 {courseName}
               </Link>
             </div>
-            <img src={img} alt="" className="image2" />
+            <img src={img} alt="course img" className="image2" />
           </div>
         </Link>
       </span>
