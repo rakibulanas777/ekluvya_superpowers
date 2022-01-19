@@ -67,23 +67,7 @@ const Navbar = () => {
                 />
                 <div className="whatssapp-skill-content">Happy to help</div>
               </a>
-              {/* {value && (
-                  <div className="whats-app-click d-flex justify-content-evenly align-items-center">
-                    <input
-                      type="text"
-                      onChange={(e) => setNumber(e.target.value)}
-                    />
-                    <div className="whatsapp-arrow">
-                      <a
-                        href={`https://wa.me/${number}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="fas fa-angle-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                )} */}
+              
             </div>
           </div>
         </div>
