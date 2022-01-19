@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+
 import Modal from "@mui/material/Modal";
 import "./LoginModal.css";
 import Payment from "./Payment";
@@ -164,7 +163,7 @@ const LoginModal = ({ openbtn, closebtn, open = false, courseDetails }) => {
         course_id: courseDetails?.course_id,
         course_amount: courseDetails?.discount || courseDetails?.amount || 100,
         accessToken: token,
-        subject_id: courseDetails?._id
+        subject_id: courseDetails?._id,
       });
     } else {
       toast.error("user info not getting please try again ", {

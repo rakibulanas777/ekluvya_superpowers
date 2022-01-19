@@ -1,7 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-import profile from "../../image/dynamic.png";
 import "./Page.css";
-import play from "../../image/playback.svg";
 import gift from "../../image/Group 113.svg";
 import line from "../../image/Line 1.svg";
 import image1 from "../../image/Path 69.svg";

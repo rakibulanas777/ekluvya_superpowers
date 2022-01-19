@@ -1,34 +1,10 @@
-import React, { Component, useEffect, useState } from "react";
+import React, {lazy,Suspense, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SliderBody.css";
 import { Link } from "react-router-dom";
-import img3 from "../../image/Gift_hover.svg";
-import topGift from "../../image/top_gift.svg";
-import { courses } from "../../api_call";
-import VideoModal from "../Modal/VideoModal";
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "none" }}
-      onClick={onClick}
-    />
-  );
-}
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "none" }}
-      onClick={onClick}
-    />
-  );
-}
+const VideoModal = lazy(() => import("../Modal/VideoModal"));
 
 const Carousoul = ({ onClick }) => {
   const [value, getValue] = useState([]);
@@ -38,9 +14,6 @@ const Carousoul = ({ onClick }) => {
   });
   useEffect(() => {
     async function getCourses() {
-      // const courseData = await courses();
-      // getCoursesData(courseData?.[0]);
-      // getValue(courseData?.[0]?.subject || []);
       fetch("../../../body_data.json")
         .then((res) => res.json())
         .then((data) => getValue(data));
@@ -103,6 +76,7 @@ const Carousoul = ({ onClick }) => {
 
   return (
     <div className="container mb-0 carusoal">
+      <Suspense fallback={<div>Loading ... </div>}>
       <Slider {...settings} className="mb-0">
         {value.map((sliders) => (
           <Sliders
@@ -118,6 +92,7 @@ const Carousoul = ({ onClick }) => {
         open2={handlePopup.show}
         videofile={handlePopup.video}
       />
+      </Suspense>
     </div>
   );
 };

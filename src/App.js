@@ -1,44 +1,45 @@
-import React, { useEffect } from "react";
-import "./App.css";
-import Home from "./Component/Home/Home";
-import Carousoul from "./Component/main/Carousoul";
-import Main from "./Component/main/Main";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Page from "./Component/Pages/Page";
-import Navbar1 from "./Component/Home/Navbar/Navbar1";
-import Navbar from "./Component/Home/Navbar/Navbar";
-import Icon from "./Component/Icon";
-import PrivacyPolicy from "./Component/Pages/PrivacyPolicy";
-
+import "./App.css";
+const Home = lazy(() => import("./Component/Home/Home"));
+const Carousoul = lazy(() => import("./Component/main/Carousoul"));
+const Main = lazy(() => import("./Component/main/Main"));
+const Page = lazy(() => import("./Component/Pages/Page"));
+const Navbar1 = lazy(() => import("./Component/Home/Navbar/Navbar1"));
+const Navbar = lazy(() => import("./Component/Home/Navbar/Navbar"));
+const Icon = lazy(() => import("./Component/Icon"));
+const PrivacyPolicy = lazy(() => import("./Component/Pages/PrivacyPolicy"));
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Navbar />
-            <Home></Home>
-            <Main />
-            <Carousoul />
-            <Icon />
-          </Route>
-          <Route exact path="/home">
-            <Navbar />
-            <Home></Home>
-            <Main />
-            <Carousoul />
-            <Icon />
-          </Route>
-          <Route exact path="/page/:id">
-            <Navbar1 />
-            <Page />
-          </Route>
-          <Route exact path="/privacy-policy.html">
-<PrivacyPolicy />
-          </Route>
-        </Switch>
-      </Router>
+      <Suspense fallback={<div>Loading ... </div>}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Navbar />
+              <Home></Home>
+              <Main />
+              <Carousoul />
+              <Icon />
+            </Route>
+            <Route exact path="/home">
+              <Navbar />
+              <Home></Home>
+              <Main />
+              <Carousoul />
+              <Icon />
+            </Route>
+            <Route exact path="/page/:id">
+              <Navbar1 />
+              <Page />
+            </Route>
+            <Route exact path="/privacy-policy.html">
+              <PrivacyPolicy />
+            </Route>
+          </Switch>
+        </Router>
+      </Suspense>
     </div>
   );
 }
