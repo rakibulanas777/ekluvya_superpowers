@@ -1,14 +1,11 @@
 import React from "react";
-import img from "../../image/Superpower Logo White.svg";
-import giftcard from "../../image/vector.svg";
-import Home from "../Home/Home";
-import Navbar from "../Home/Navbar/Navbar";
+import img from "../../image/Superpower-Logo-White.webp";
+import giftcard from "../../image/vector.webp";
 import video from "../../image/particles small.mp4";
-import gif from "../../image/particles-small.gif";
-
-import arrow from "../../image/Path 67.svg";
+import arrow from "../../image/Path-67.webp";
 import "./main.css";
 import CarousoulBody from "./CarousoulBody";
+
 const Main = () => {
   return (
     <main>

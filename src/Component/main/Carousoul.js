@@ -4,9 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 import { Link } from "react-router-dom";
-import img3 from "../../image/Gift_hover.svg";
-import topGift from "../../image/top_gift.svg";
-import { courses } from "../../api_call";
+import img3 from "../../image/Gift_hover.webp";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (

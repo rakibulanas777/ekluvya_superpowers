@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../../image/logo.svg";
-import gift from "../../../image/gift.svg";
+import gift from "../../../image/gift.webp";
 import whatsapp from "../../../image/Component 38 – 1.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";

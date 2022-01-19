@@ -1,10 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar/Navbar";
-import giftcard from "../../image/vector.svg";
 import "./Home.css";
-import arrow from "../../image/Path 67.svg";
-import Main from "../main/Main";
-import CarousoulBody from "../main/CarousoulBody";
+import arrow from "../../image/Path-67.webp";
 const Home = () => {
   return (
     <header>
