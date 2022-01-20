@@ -4,7 +4,8 @@ import giftcard from "../../image/vector.webp";
 import video from "../../image/particles small.mp4";
 import arrow from "../../image/Path-67.webp";
 import "./main.css";
-const CarousoulBody = lazy(() => import("./CarousoulBody"));
+import CarousoulBody from "./CarousoulBody";
+// const CarousoulBody = lazy(() => import("./CarousoulBody"));
 const Main = () => {
   return (
     <main>
