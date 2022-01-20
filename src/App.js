@@ -10,6 +10,7 @@ const Navbar = lazy(() => import("./Component/Home/Navbar/Navbar"));
 const Icon = lazy(() => import("./Component/Icon"));
 const PrivacyPolicy = lazy(() => import("./Component/Pages/PrivacyPolicy"));
 
+
 function App() {
   return (
     <div className="App">
