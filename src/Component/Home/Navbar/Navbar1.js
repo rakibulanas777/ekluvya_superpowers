@@ -5,7 +5,6 @@ import whatsapp from "../../../image/Component 38 – 1.png";
 import "./Navbar1.css";
 import { Link } from "react-router-dom";
 const Navbar1 = () => {
-  const [number, setNumber] = useState("");
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 110) {
@@ -15,7 +14,7 @@ const Navbar1 = () => {
     }
   };
   window.addEventListener("scroll", changeColor);
-  const [value, showValue] = useState(false);
+
   return (
     <nav
       className={
@@ -62,23 +61,6 @@ const Navbar1 = () => {
                 />
                 <div className="whatssapp-skill-content1">Happy to help</div>
               </a>
-              {/* {value && (
-                  <div className="whats-app-click d-flex justify-content-evenly align-items-center">
-                    <input
-                      type="text"
-                      onChange={(e) => setNumber(e.target.value)}
-                    />
-                    <div className="whatsapp-arrow">
-                      <a
-                        href={`https://wa.me/${number}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="fas fa-angle-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                )} */}
             </div>
           </div>
         </div>

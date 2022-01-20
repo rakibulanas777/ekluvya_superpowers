@@ -1,11 +1,10 @@
-import React from "react";
+import React, { lazy } from "react";
 import img from "../../image/Superpower-Logo-White.webp";
 import giftcard from "../../image/vector.webp";
 import video from "../../image/particles small.mp4";
 import arrow from "../../image/Path-67.webp";
 import "./main.css";
-import CarousoulBody from "./CarousoulBody";
-
+const CarousoulBody = lazy(() => import("./CarousoulBody"));
 const Main = () => {
   return (
     <main>

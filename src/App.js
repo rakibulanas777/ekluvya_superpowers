@@ -18,7 +18,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Navbar />
-              <Home></Home>
+              <Home />
               <Main />
               <Carousoul />
               <Icon />
