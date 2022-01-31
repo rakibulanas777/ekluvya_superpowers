@@ -65,9 +65,8 @@ const Navbar = () => {
                   // }}
                   srcset=""
                 />
-                <div className="whatssapp-skill-content">Happy to help</div>
+                <div className="whatssapp-skill-content">Get a discount</div>
               </a>
-              
             </div>
           </div>
         </div>
