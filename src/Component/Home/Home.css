@@ -87,7 +87,7 @@ header {
   }
   .right-position-text {
     top: 90%;
-    right: 30%;
+    left: 0%;
     text-align: start;
   }
 }
@@ -97,7 +97,7 @@ header {
   }
   .right-position-text {
     top: 90%;
-    right: 20%;
+    right: 0%;
     text-align: start;
   }
 }
@@ -115,8 +115,9 @@ header {
     height: 900px;
   }
   .right-position-text {
-    top: 90%;
+    top: 110%;
     right: 0%;
+    text-align: start;
     text-align: start;
   }
   .main-description {
