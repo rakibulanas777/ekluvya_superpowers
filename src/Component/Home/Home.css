@@ -26,9 +26,10 @@ header {
   padding: 10px 0px;
 }
 .bottom-deatails {
-  font-size: 18px;
-  color: white;
+  font-size: 15px;
+  color: #fff;
   font-weight: 400;
+  text-align: center;
 }
 .main-title {
   color: #e61277;
