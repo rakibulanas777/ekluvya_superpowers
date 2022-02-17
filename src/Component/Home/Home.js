@@ -20,13 +20,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="right-position-text">
+      {/* <div className="right-position-text">
         <div className="right-position-text-title mb-3">PULLELA GOPICHAND</div>
         <div className="bottom-deatails ">
           Father of two | Dronacharya Awardee <br /> Arjuna Awardee | Padma
           Bhushan
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };
