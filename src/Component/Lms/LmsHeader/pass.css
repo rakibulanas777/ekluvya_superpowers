@@ -5,3 +5,65 @@
 	background-size: cover;
 	background-position: right;
 }
+.pass-title {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.pass-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 30px;
+}
+.pass-grid-item {
+	background-color: white;
+	border-radius: 12px;
+	position: relative;
+}
+.pass-grid-item-title,
+.pass-grid-deatils {
+	font-size: 1rem;
+	font-weight: 600;
+}
+.position {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	transform: translate(-50%, 50%);
+	background-color: #ededed;
+}
+.btn-pass {
+	padding: 0.3rem 1.2rem;
+	background-color: #ec127a;
+	border: none;
+	font-weight: 600;
+	border-radius: 25px;
+	color: white;
+}
+.inter-pass {
+	margin-top: 6rem;
+}
+.inter-pass-title {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+@media (max-width: 990px) {
+	.pass-grid {
+		grid-template-columns: 1fr;
+	}
+	.pass {
+		height: 140vh;
+	}
+}
+@media (max-width: 450px) {
+	.pass {
+		height: 150vh;
+	}
+}
+@media (max-width: 350px) {
+	.pass {
+		height: 170vh;
+	}
+}
