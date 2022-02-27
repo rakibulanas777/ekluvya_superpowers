@@ -15,24 +15,6 @@ const Comparision = () => {
 					<div className="comparision-title">
 						A small price to pay in comparison to wasting another year
 					</div>
-					<div className="d-flex">
-						<div className="select" tabindex="1">
-							<input
-								className="selectopt"
-								name="test"
-								type="radio"
-								id="opt1"
-								checked
-							/>
-							<label for="opt1" className="option">
-								1st Year
-							</label>
-							<input className="selectopt" name="test" type="radio" id="opt2" />
-							<label for="opt2" className="option">
-								2nd Year
-							</label>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
