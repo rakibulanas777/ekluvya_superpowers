@@ -94,8 +94,8 @@ const Carousoul = ({ onClick }) => {
     ],
   };
   return (
-    <div className="container-fluid mb-5 carusoal">
-      <a name="gift"></a>
+    <div className="container-fluid mb-5 carusoal" id="gift">
+      
       <Slider {...settings} className="mb-5">
         {value.map((sliders) => (
           <Sliders Slidercard={sliders} id={sliders.id}></Sliders>
